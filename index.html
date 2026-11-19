@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Our family trip to Thailand, 1-8 May 2027: Bangkok, Phuket and Krabi. Interactive map, tips, budget and journal.">
+<meta property="og:title" content="Thailand 2027">
+<meta property="og:description" content="Bangkok → Phuket → Krabi · 6 couples, 7 kids · 1-8 May 2027. Explore the map, tips and budget.">
+<meta property="og:image" content="https://anshulraj21.github.io/thailand-2027/photos/railay.jpg">
+<meta property="og:url" content="https://anshulraj21.github.io/thailand-2027/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Thailand 2027</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap">
+
+<style>
+/* Layout: tabbed journal; the Map tab is a two-column explorer (illustrated map stage + side panel) that stacks on phones */
+:root {
+  --bg: #FDFAF6;
+  --fg: #2D2A26;
+  --fg-muted: #6F6A64;
+  --accent: #E0653B;
+  --accent-soft: #FFEDE5;
+  --teal: #23877B;
+  --teal-soft: #E3F3F1;
+  --gold: #B98512;
+  --gold-soft: #FBF3DF;
+  --sand: #F4EDE4;
+  --card: #FFFFFF;
+  --card-border: #EAE3D9;
+  --shadow: rgba(45,42,38,0.10);
+  --hero-gradient: linear-gradient(135deg, #23877B 0%, #264653 62%, #1D3A47 100%);
+
+  --sea: #CDE8E4;
+  --sea-line: #A6D3CC;
+  --land: #F5ECDD;
+  --land-edge: #D8C4A3;
+  --park: #CFE2B6;
+  --river: #8DC6D6;
+  --road: #E7D7BE;
+  --rail: #7DB04A;
+  --map-ink: #5C534A;
+
+  --c-stay: #E0653B;
+  --c-see: #C8921A;
+  --c-eat: #23877B;
+  --c-play: #8455C4;
+  --c-stroll: #4E9A2C;
+  --c-move: #4A6274;
+
+  --f-display: 'Playfair Display', Georgia, serif;
+  --f-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --f-hand: 'Caveat', 'Segoe Print', 'Comic Sans MS', cursive;
+  --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191715; --fg: #ECE7E1; --fg-muted: #A39C94;
+    --accent: #F08D68; --accent-soft: #3A251C;
+    --teal: #5CC5B7; --teal-soft: #1B2D2B;
+    --gold: #E9BE5C; --gold-soft: #2E281A;
+    --sand: #24211E; --card: #23201E; --card-border: #3A3530;
+    --shadow: rgba(0,0,0,0.4);
+    --hero-gradient: linear-gradient(135deg, #1C6A61 0%, #162D38 62%, #0F1E26 100%);
+    --sea: #15302E; --sea-line: #21504A; --land: #2B2722; --land-edge: #4C4337;
+    --park: #24361D; --river: #2D6878; --road: #3A342D; --rail: #6FA043; --map-ink: #C9BFB3;
+    --c-stay: #F08D68; --c-see: #E9BE5C; --c-eat: #5CC5B7; --c-play: #B190E6; --c-stroll: #86C766; --c-move: #93AEC2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191715; --fg: #ECE7E1; --fg-muted: #A39C94;
+  --accent: #F08D68; --accent-soft: #3A251C;
+  --teal: #5CC5B7; --teal-soft: #1B2D2B;
+  --gold: #E9BE5C; --gold-soft: #2E281A;
+  --sand: #24211E; --card: #23201E; --card-border: #3A3530;
+  --shadow: rgba(0,0,0,0.4);
+  --hero-gradient: linear-gradient(135deg, #1C6A61 0%, #162D38 62%, #0F1E26 100%);
+  --sea: #15302E; --sea-line: #21504A; --land: #2B2722; --land-edge: #4C4337;
+  --park: #24361D; --river: #2D6878; --road: #3A342D; --rail: #6FA043; --map-ink: #C9BFB3;
+  --c-stay: #F08D68; --c-see: #E9BE5C; --c-eat: #5CC5B7; --c-play: #B190E6; --c-stroll: #86C766; --c-move: #93AEC2;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--sand); }
+h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+button { font: inherit; color: inherit; }
+a { color: var(--teal); }
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+/* Hero */
+.hero {
+  background: var(--hero-gradient);
+  color: #fff;
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding: 2.4rem max(24px, env(safe-area-inset-right, 0px)) 2rem max(24px, env(safe-area-inset-left, 0px));
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 12% 85%, rgba(233,196,106,0.18), transparent 50%), radial-gradient(circle at 88% 15%, rgba(92,197,183,0.22), transparent 42%);
+}
+.hero h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; position: relative; }
+.hero .subtitle { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; position: relative; margin-top: 0.2rem; }
+.route-ribbon { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 0.35rem 0.5rem; align-items: center; margin-top: 1rem; position: relative; font-family: var(--f-mono); font-size: 0.8rem; }
+.route-ribbon .stop { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 0.2rem 0.7rem; }
+.route-ribbon .hop { opacity: 0.75; font-size: 0.95rem; }
+.stamp {
+  position: absolute; top: 1rem; right: max(22px, env(safe-area-inset-right, 0px));
+  width: 84px; height: 84px; border: 2.5px dashed rgba(255,255,255,0.35); border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transform: rotate(12deg); font-family: var(--f-mono); font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; pointer-events: none;
+}
+.stamp .big { font-size: 1.3rem; font-weight: 700; line-height: 1; }
+.sticker { position: absolute; font-size: 1.9rem; filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.2)); animation: float 5s ease-in-out infinite; pointer-events: none; }
+.sticker:nth-child(2) { animation-delay: -1.2s; } .sticker:nth-child(3) { animation-delay: -2.4s; } .sticker:nth-child(4) { animation-delay: -3.6s; }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(var(--rot,0deg)); } 50% { transform: translateY(-8px) rotate(calc(var(--rot,0deg) + 4deg)); } }
+
+/* Nav */
+.nav {
+  display: flex; overflow-x: auto; scrollbar-width: none;
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--sand); border-bottom: 1px solid var(--card-border);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 8;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav button { flex-shrink: 0; padding: 0.8rem 1rem; font-size: 0.84rem; font-weight: 600; background: none; border: none; border-bottom: 2.5px solid transparent; color: var(--fg-muted); cursor: pointer; white-space: nowrap; }
+.nav button.active { color: var(--accent); border-bottom-color: var(--accent); }
+.nav button:hover { color: var(--fg); }
+
+.section { max-width: 780px; margin: 0 auto; padding-block: 2rem 1rem; }
+.section.wide { max-width: 1120px; }
+.section-title { font-size: 1.7rem; }
+.section-subtitle { color: var(--fg-muted); font-size: 0.92rem; margin: 0.25rem 0 1.4rem; }
+.hand { font-family: var(--f-hand); }
+
+/* ---------- MAP ---------- */
+.map-top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.8rem 1.2rem; margin-bottom: 1rem; }
+.stamp-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold-soft); color: var(--fg); border: 1px dashed var(--gold); border-radius: 100px; padding: 0.35rem 0.9rem; font-size: 0.84rem; font-weight: 600; }
+.stamp-pill .n { font-family: var(--f-mono); color: var(--gold); }
+.stamp-pill.pop { animation: pop 0.45s ease; }
+@keyframes pop { 40% { transform: scale(1.12) rotate(-2deg); } }
+
+.views { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.9rem; }
+.chip {
+  border: 1px solid var(--card-border); background: var(--card); border-radius: 100px;
+  padding: 0.35rem 0.85rem; font-size: 0.82rem; font-weight: 600; cursor: pointer; color: var(--fg-muted);
+  display: inline-flex; align-items: center; gap: 0.35rem; transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.chip:hover { color: var(--fg); border-color: var(--fg-muted); }
+.chip.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.chip .sw { width: 9px; height: 9px; border-radius: 50%; background: var(--sw); }
+.chip.cat-off { opacity: 0.45; text-decoration: line-through; }
+
+.map-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+@media (max-width: 880px) { .map-layout { grid-template-columns: minmax(0, 1fr); } }
+
+.stage-wrap { display: flex; flex-direction: column; gap: 0.7rem; align-items: center; }
+.stage {
+  position: relative; width: min(100%, calc(80vh * 0.8), 600px); aspect-ratio: 4 / 5; max-width: 100%;
+  border-radius: 18px; overflow: hidden; background: var(--sea);
+  border: 1px solid var(--card-border); box-shadow: 0 12px 34px var(--shadow);
+  touch-action: manipulation;
+}
+.world { position: absolute; inset: 0; transition: transform 0.32s cubic-bezier(.3,.7,.3,1), opacity 0.32s; }
+.world.leaving { transform: scale(1.7); opacity: 0; }
+.world.entering { transform: scale(0.82); opacity: 0; transition: none; }
+.world svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.pins { position: absolute; inset: 0; }
+
+.pin {
+  position: absolute; width: 34px; height: 38px; padding: 0; border: 0; background: none; cursor: pointer;
+  transform: translate(-50%, -100%); z-index: 2;
+  animation: drop 0.5s cubic-bezier(.3,1.6,.5,1) backwards; animation-delay: var(--d, 0s);
+  transition: opacity 0.25s, filter 0.25s;
+}
+.pin-head {
+  position: absolute; left: 2px; top: 1px; width: 30px; height: 30px; border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg); background: var(--pc); border: 2px solid var(--card);
+  box-shadow: 0 3px 8px var(--shadow); display: grid; place-items: center; transition: transform 0.2s;
+}
+.pin-emoji { transform: rotate(45deg); font-size: 15px; line-height: 1; }
+.pin:hover .pin-head, .pin.active .pin-head { transform: rotate(-45deg) scale(1.18); }
+.pin.active { z-index: 5; }
+.pin.active .pin-head { animation: wiggle 0.5s ease; }
+.pin .pin-check {
+  position: absolute; right: -4px; top: -4px; width: 15px; height: 15px; border-radius: 50%;
+  background: var(--gold); color: var(--card); font-size: 9px; font-weight: 700; display: none; place-items: center; border: 1.5px solid var(--card);
+}
+.pin.stamped .pin-check { display: grid; }
+.pin.off { opacity: 0; pointer-events: none; }
+.pin.dim { opacity: 0.28; filter: grayscale(0.7); }
+.pin .opt-ring { position: absolute; left: 0; top: -1px; width: 34px; height: 34px; border-radius: 50%; border: 1.5px dashed var(--pc); opacity: 0.6; pointer-events: none; }
+@keyframes drop { from { opacity: 0; transform: translate(-50%, -190%); } }
+@keyframes wiggle { 25% { transform: rotate(-55deg) scale(1.2); } 60% { transform: rotate(-38deg) scale(1.2); } }
+
+.pin.city { width: 58px; height: 58px; transform: translate(-50%, -50%); }
+.pin.city .bubble {
+  position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--card);
+  background-size: cover; background-position: center; box-shadow: 0 0 0 2.5px var(--pc), 0 6px 14px var(--shadow);
+  transition: transform 0.2s;
+}
+.pin.city:hover .bubble, .pin.city.active .bubble { transform: scale(1.1) rotate(-3deg); }
+.pin.city .city-label {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 4px; white-space: nowrap;
+  font-family: var(--f-hand); font-size: 19px; font-weight: 700; color: var(--fg); line-height: 1;
+  background: var(--card); padding: 1px 8px 3px; border-radius: 8px; box-shadow: 0 2px 6px var(--shadow);
+}
+.pin.city .city-label small { font-family: var(--f-mono); font-size: 10px; font-weight: 500; color: var(--fg-muted); margin-left: 4px; }
+.pin.city::after { content: ""; position: absolute; inset: -8px; border-radius: 50%; border: 2px solid var(--pc); opacity: 0; animation: ring 2.6s ease-out infinite; animation-delay: var(--d, 0s); }
+@keyframes ring { 0% { transform: scale(0.8); opacity: 0.6; } 100% { transform: scale(1.4); opacity: 0; } }
+.pin.mini { width: 24px; height: 24px; transform: translate(-50%, -50%); }
+.pin.mini .bubble { position: absolute; inset: 0; border-radius: 50%; background: var(--card); border: 2px solid var(--pc); display: grid; place-items: center; font-size: 12px; box-shadow: 0 2px 6px var(--shadow); }
+.pin.mini .city-label { position: absolute; left: 100%; top: 50%; transform: translateY(-50%); margin-left: 5px; white-space: nowrap; font-family: var(--f-hand); font-size: 16px; font-weight: 700; color: var(--fg); background: var(--card); padding: 0 6px 1px; border-radius: 6px; box-shadow: 0 1px 4px var(--shadow); line-height: 1.2; }
+.pin.mini.lbl-left .city-label { left: auto; right: 100%; margin-left: 0; margin-right: 5px; }
+
+.edge {
+  position: absolute; transform: translate(-50%, -50%); z-index: 3; border: 0; cursor: pointer;
+  background: var(--fg); color: var(--bg); border-radius: 100px; padding: 0.25rem 0.7rem;
+  font-size: 0.74rem; font-weight: 700; white-space: nowrap; box-shadow: 0 3px 10px var(--shadow);
+  animation: nudge 2.4s ease-in-out infinite;
+}
+@keyframes nudge { 50% { transform: translate(-50%, -50%) translate(var(--nx, 0), var(--ny, -3px)); } }
+
+.traveler {
+  position: absolute; z-index: 6; width: 38px; height: 38px; border-radius: 50%; background: var(--card);
+  display: grid; place-items: center; font-size: 20px; box-shadow: 0 4px 12px var(--shadow), 0 0 0 2.5px var(--accent);
+  transform: translate(-50%, -150%); transition: left 0.9s cubic-bezier(.4,0,.2,1), top 0.9s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+.traveler.glide { transition: none; }
+.traveler span { animation: bob 0.9s ease-in-out infinite; display: block; }
+@keyframes bob { 50% { transform: translateY(-3px); } }
+
+.map-badge { position: absolute; right: 10px; bottom: 32px; z-index: 1; font-family: var(--f-mono); font-size: 10px; color: var(--map-ink); background: color-mix(in srgb, var(--card) 80%, transparent); padding: 2px 8px; border-radius: 6px; }
+.tour-cap {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 7; max-width: calc(100% - 24px);
+  background: var(--fg); color: var(--bg); font-family: var(--f-hand); font-size: 22px; font-weight: 700;
+  padding: 2px 16px 4px; border-radius: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  box-shadow: 0 4px 14px var(--shadow); transition: opacity 0.3s;
+}
+
+/* Postcard */
+.card {
+  position: absolute; z-index: 8; width: min(272px, calc(100% - 20px));
+  background: var(--card); border-radius: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.25); border: 1px solid var(--card-border);
+  overflow: visible; animation: cardIn 0.28s cubic-bezier(.3,1.4,.5,1);
+}
+.card.sheet { left: 10px !important; right: 10px; bottom: 10px; top: auto !important; width: auto; max-height: 64%; overflow-y: auto; }
+@keyframes cardIn { from { opacity: 0; transform: translateY(8px) scale(0.94) rotate(-2deg); } }
+.card-photo { position: relative; margin: 8px 8px 0; border-radius: 9px; overflow: hidden; height: 140px; background: var(--sand); transform: rotate(-1deg); box-shadow: 0 2px 6px var(--shadow); }
+.card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-photo::before { content: ""; position: absolute; z-index: 2; top: -4px; left: 50%; width: 64px; height: 16px; transform: translateX(-50%) rotate(3deg); background: color-mix(in srgb, var(--gold) 45%, transparent); }
+.ill { width: 100%; height: 100%; display: grid; place-items: center; background: var(--ill, linear-gradient(135deg, var(--teal-soft), var(--gold-soft))); }
+.ill span { font-size: 56px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
+.ill em { position: absolute; bottom: 6px; right: 10px; font-family: var(--f-hand); font-style: normal; font-size: 15px; color: var(--map-ink); }
+.card-body { padding: 0.7rem 0.95rem 0.9rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.tag { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.1rem 0.5rem; border-radius: 100px; background: var(--sand); color: var(--fg-muted); }
+.tag.cat { background: color-mix(in srgb, var(--pc) 16%, transparent); color: var(--pc); }
+.tag.opt { border: 1px dashed var(--fg-muted); background: none; }
+.card h4 { font-size: 1.15rem; line-height: 1.25; }
+.card-tip { font-size: 0.84rem; color: var(--fg); line-height: 1.5; }
+.card-line { font-size: 0.8rem; color: var(--fg-muted); line-height: 1.45; display: flex; gap: 0.4rem; }
+.card-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.8rem; margin-top: 0.2rem; font-size: 0.78rem; font-weight: 600; }
+.card-links a { text-decoration: none; }
+.card-links a:hover { text-decoration: underline; }
+.card-links .go { border: 0; background: var(--accent); color: #fff; border-radius: 8px; padding: 0.3rem 0.7rem; cursor: pointer; font-weight: 700; font-size: 0.78rem; }
+.card-credit { font-size: 0.68rem; color: var(--fg-muted); }
+.card-credit a { color: var(--fg-muted); }
+.card-x { position: absolute; z-index: 3; top: -9px; right: -9px; width: 28px; height: 28px; border-radius: 50%; border: 0; background: var(--fg); color: var(--bg); cursor: pointer; font-size: 16px; line-height: 1; box-shadow: 0 2px 6px var(--shadow); }
+.visa {
+  position: absolute; z-index: 3; right: 14px; top: 118px; transform: rotate(-14deg); pointer-events: none;
+  border: 2.5px solid var(--gold); color: var(--gold); border-radius: 8px; padding: 1px 8px; background: var(--card);
+  font-family: var(--f-mono); font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.visa.fresh { animation: thunk 0.45s cubic-bezier(.3,1.8,.5,1); }
+@keyframes thunk { from { transform: rotate(-30deg) scale(2.4); opacity: 0; } }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.45rem; }
+.btn { border: 1px solid var(--card-border); background: var(--card); border-radius: 10px; padding: 0.5rem 0.9rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; }
+.btn:hover { border-color: var(--fg-muted); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.06); }
+.tour-prog { font-family: var(--f-mono); font-size: 0.75rem; color: var(--fg-muted); min-width: 4.5em; text-align: center; }
+
+.side { display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.side h3 { font-family: var(--f-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.5rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.days .chip { padding: 0.3rem 0.65rem; font-family: var(--f-mono); font-size: 0.74rem; }
+.place-list { display: flex; flex-direction: column; gap: 0.3rem; max-height: 470px; overflow-y: auto; padding-right: 4px; }
+.place {
+  display: grid; grid-template-columns: 30px minmax(0,1fr) auto; align-items: center; gap: 0.6rem;
+  text-align: left; border: 1px solid transparent; background: none; border-radius: 10px; padding: 0.4rem 0.5rem; cursor: pointer; width: 100%;
+}
+.place:hover, .place.active { background: var(--card); border-color: var(--card-border); }
+.place .ico { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--pc) 16%, transparent); font-size: 15px; }
+.place .nm { font-size: 0.86rem; font-weight: 600; line-height: 1.25; }
+.place .meta { font-size: 0.72rem; color: var(--fg-muted); }
+.place .st { font-size: 0.85rem; color: var(--gold); width: 1.2em; text-align: center; }
+.place.off { display: none; }
+.place.dim { opacity: 0.4; }
+.view-note { font-size: 0.86rem; color: var(--fg-muted); background: var(--sand); border-radius: 12px; padding: 0.8rem 1rem; }
+.view-note b { color: var(--fg); }
+.credits { font-size: 0.74rem; color: var(--fg-muted); margin-top: 1.2rem; max-width: 70ch; }
+
+.confetti { position: absolute; inset: 0; pointer-events: none; z-index: 9; overflow: hidden; }
+.confetti i { position: absolute; top: -12px; width: 8px; height: 12px; border-radius: 2px; animation: fall 1.8s ease-in forwards; }
+@keyframes fall { to { transform: translateY(560px) rotate(540deg); opacity: 0.2; } }
+
+/* ---------- Itinerary ---------- */
+.day-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.days-col { display: flex; flex-direction: column; gap: 1rem; }
+.day-head { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
+.day-badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.22rem 0.7rem; border-radius: 100px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.day-badge.bkk { background: var(--accent-soft); color: var(--accent); }
+.day-badge.hkt { background: var(--teal-soft); color: var(--teal); }
+.day-badge.kbv { background: var(--gold-soft); color: var(--gold); }
+.day-card h3 { font-size: 1.22rem; }
+.day-card ul { margin: 0; padding-left: 1.1rem; color: var(--fg-muted); font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.day-card ul b { color: var(--fg); font-weight: 600; }
+.veg-tip { display: flex; gap: 0.55rem; padding: 0.55rem 0.8rem; background: var(--teal-soft); border-radius: 9px; font-size: 0.83rem; color: var(--teal); }
+.on-map { border: 1px solid var(--card-border); background: var(--sand); border-radius: 100px; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; cursor: pointer; }
+.on-map:hover { border-color: var(--fg-muted); }
+.hop-line { align-self: center; font-size: 0.78rem; font-weight: 600; color: var(--fg-muted); background: var(--sand); border: 1px dashed var(--card-border); border-radius: 100px; padding: 0.25rem 0.9rem; }
+
+/* ---------- Budget ---------- */
+.calc { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 1.3rem 1.4rem; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1.2rem 1.6rem; align-items: center; margin-bottom: 1.6rem; }
+@media (max-width: 640px) { .calc { grid-template-columns: minmax(0,1fr); } }
+.calc label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.35rem; }
+.calc select, .calc input[type=range] { width: 100%; }
+.calc select { padding: 0.5rem 0.6rem; border-radius: 9px; border: 1px solid var(--card-border); background: var(--bg); color: var(--fg); font: inherit; }
+.calc .fields { display: flex; flex-direction: column; gap: 0.9rem; }
+.seg { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.seg button { border: 1px solid var(--card-border); background: var(--bg); border-radius: 9px; padding: 0.4rem 0.8rem; cursor: pointer; font-weight: 600; font-family: var(--f-mono); }
+.seg button.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.range-ends { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--fg-muted); }
+.result { text-align: center; }
+.result .big { font-family: var(--f-mono); font-size: clamp(2rem, 6vw, 2.8rem); font-weight: 500; color: var(--accent); font-variant-numeric: tabular-nums; }
+.result .hand { font-size: 1.3rem; color: var(--fg-muted); }
+.result .small { font-size: 0.78rem; color: var(--fg-muted); margin-top: 0.3rem; }
+.city-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0.7rem; margin-bottom: 1.4rem; }
+@media (max-width: 640px) { .city-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.city-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 0.9rem; text-align: center; }
+.city-card .c { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-muted); }
+.city-card .a { font-family: var(--f-mono); font-size: 1.02rem; color: var(--accent); margin-top: 0.2rem; font-variant-numeric: tabular-nums; }
+.tbl { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; overflow-x: auto; margin-bottom: 1.4rem; }
+.tbl table { width: 100%; border-collapse: collapse; font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+.tbl th { text-align: left; padding: 0.7rem 0.9rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--fg-muted); background: var(--sand); }
+.tbl td { padding: 0.6rem 0.9rem; border-top: 1px solid var(--card-border); vertical-align: top; }
+.tbl td.num { font-family: var(--f-mono); white-space: nowrap; }
+.tbl tr.total td { font-weight: 700; color: var(--accent); }
+.h3 { font-size: 1.2rem; margin: 0.4rem 0 0.8rem; }
+.bullets { margin: 0 0 1rem; padding-left: 1.1rem; color: var(--fg-muted); font-size: 0.9rem; }
+
+/* ---------- Tips ---------- */
+.tip-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.8rem; margin-bottom: 1.6rem; }
+@media (max-width: 640px) { .tip-grid { grid-template-columns: minmax(0,1fr); } }
+.tip-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.tip-card h4 { font-family: var(--f-body); font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 0.45rem; }
+.tip-card p, .tip-card li { font-size: 0.85rem; color: var(--fg-muted); line-height: 1.55; }
+.tip-card ul { margin: 0; padding-left: 1rem; }
+.phrases { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.7rem; }
+.phrase { perspective: 700px; height: 112px; border: 0; padding: 0; background: none; cursor: pointer; text-align: center; }
+.phrase .inner { position: relative; width: 100%; height: 100%; transition: transform 0.5s; transform-style: preserve-3d; }
+.phrase.flip .inner { transform: rotateY(180deg); }
+.phrase .face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem; padding: 0.6rem; }
+.phrase .front { background: var(--gold-soft); border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent); }
+.phrase .back { background: var(--fg); color: var(--bg); transform: rotateY(180deg); }
+.phrase .en { font-weight: 700; font-size: 0.92rem; }
+.phrase .say { font-family: var(--f-hand); font-size: 1.25rem; color: var(--gold); line-height: 1.1; }
+.phrase .th { font-size: 1.6rem; line-height: 1.2; }
+.phrase .hint { font-size: 0.68rem; opacity: 0.7; }
+
+/* ---------- Group ---------- */
+.group-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.8rem; margin-bottom: 1.6rem; }
+@media (max-width: 640px) { .group-grid { grid-template-columns: minmax(0,1fr); } }
+.group-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem 1.1rem; }
+.group-card .gc-city { font-weight: 700; }
+.group-card .gc-detail { font-size: 0.82rem; color: var(--fg-muted); }
+.check-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0; font-size: 0.9rem; cursor: pointer; border-bottom: 1px dashed var(--card-border); }
+.check-item input { accent-color: var(--teal); width: 17px; height: 17px; flex-shrink: 0; }
+.check-item.checked span { text-decoration: line-through; color: var(--fg-muted); }
+.progress { height: 8px; border-radius: 100px; background: var(--sand); overflow: hidden; margin: 0.4rem 0 1rem; }
+.progress i { display: block; height: 100%; width: 0; background: var(--teal); transition: width 0.4s; }
+
+/* ---------- Journal ---------- */
+.compose { background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.2rem; }
+.compose textarea { width: 100%; min-height: 90px; border: none; background: transparent; color: var(--fg); font-family: var(--f-hand); font-size: 1.35rem; line-height: 1.35; resize: vertical; outline: none; }
+.compose-row { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: space-between; }
+.stickers { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.stickers button { border: 1px solid transparent; background: var(--sand); border-radius: 9px; width: 36px; height: 36px; font-size: 18px; cursor: pointer; }
+.stickers button.on { border-color: var(--accent); background: var(--accent-soft); transform: rotate(-6deg); }
+.compose select { padding: 0.4rem 0.5rem; border-radius: 8px; border: 1px solid var(--card-border); background: var(--bg); color: var(--fg); font: inherit; font-size: 0.85rem; }
+.entries { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.9rem; }
+.entry { position: relative; background: var(--card); border: 1px solid var(--card-border); border-radius: 4px 14px 14px 14px; padding: 1rem 1rem 0.9rem; box-shadow: 0 4px 12px var(--shadow); transform: rotate(var(--r, 0deg)); }
+.entry .stk { position: absolute; top: -14px; right: 10px; font-size: 28px; transform: rotate(10deg); filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2)); }
+.entry .when { font-family: var(--f-mono); font-size: 0.7rem; color: var(--fg-muted); }
+.entry .txt { font-family: var(--f-hand); font-size: 1.3rem; line-height: 1.3; margin-top: 0.3rem; white-space: pre-wrap; word-break: break-word; }
+.entry .del { position: absolute; bottom: 6px; right: 8px; border: 0; background: none; color: var(--fg-muted); cursor: pointer; font-size: 0.75rem; opacity: 0.6; }
+.entry .del:hover { opacity: 1; color: var(--accent); }
+.empty { text-align: center; color: var(--fg-muted); padding: 1.5rem; font-family: var(--f-hand); font-size: 1.4rem; grid-column: 1 / -1; }
+
+.footer-deco { text-align: center; padding: 2rem 0 3rem; font-size: 2rem; opacity: 0.35; letter-spacing: 0.5rem; }
+
+@media (max-width: 520px) {
+  .stamp { width: 62px; height: 62px; top: 0.7rem; } .stamp .big { font-size: 0.95rem; }
+  .hero { padding-top: 2rem; }
+  .sticker { font-size: 1.4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+
+<div class="hero">
+  <div class="sticker" style="top:14%;left:7%;--rot:-8deg">🌴</div>
+  <div class="sticker" style="top:62%;left:4%;--rot:12deg">🐘</div>
+  <div class="sticker" style="top:18%;right:16%;--rot:6deg">🌊</div>
+  <div class="sticker" style="bottom:12%;right:7%;--rot:-5deg">🥭</div>
+  <div class="stamp"><span>Kingdom of</span><span class="big">TH</span><span>May 2027</span></div>
+  <h1>Thailand 2027</h1>
+  <div class="subtitle">6 couples · 7 kids · 1 May – 8 May</div>
+  <div class="route-ribbon" aria-label="Route">
+    <span class="stop">Bangkok · 2N</span><span class="hop">✈️</span>
+    <span class="stop">Phuket · 3N</span><span class="hop">🚐</span>
+    <span class="stop">Krabi · 2N</span>
+  </div>
+</div>
+
+<nav class="nav" id="nav">
+  <button class="active" data-tab="map">Map</button>
+  <button data-tab="itinerary">Itinerary</button>
+  <button data-tab="budget">Budget</button>
+  <button data-tab="tips">Tips</button>
+  <button data-tab="group">Our Group</button>
+  <button data-tab="journal">Journal</button>
+</nav>
+
+<!-- MAP -->
+<section class="section wide" id="tab-map">
+  <div class="map-top">
+    <div>
+      <h2 class="section-title">Explore the route</h2>
+      <p class="section-subtitle" style="margin-bottom:0">Hover or tap a pin for photos, tips and links. Every place you open earns a passport stamp. The map is illustrated, so positions are approximate.</p>
+    </div>
+    <span class="stamp-pill" id="stampPill">🛂 Stamps <span class="n" id="stampN">0 / 0</span></span>
+  </div>
+
+  <div class="views" id="views" role="tablist" aria-label="Map view"></div>
+
+  <div class="map-layout">
+    <div class="stage-wrap">
+      <div class="stage" id="stage">
+        <div class="world" id="world">
+          <svg id="mapSvg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+          <div class="pins" id="pins"></div>
+        </div>
+        <div class="traveler" id="traveler" hidden><span>👨‍👩‍👧‍👦</span></div>
+        <div class="tour-cap" id="tourCap" hidden></div>
+        <div class="card" id="card" hidden></div>
+        <div class="confetti" id="confetti"></div>
+      </div>
+      <div class="controls">
+        <button class="btn" id="tPrev" aria-label="Previous stop">⏮</button>
+        <button class="btn primary" id="tPlay">▶ Play the trip</button>
+        <button class="btn" id="tNext" aria-label="Next stop">⏭</button>
+        <span class="tour-prog" id="tProg"></span>
+      </div>
+    </div>
+
+    <aside class="side">
+      <div class="view-note" id="viewNote"></div>
+      <div>
+        <h3>Show</h3>
+        <div class="chips" id="cats"></div>
+      </div>
+      <div>
+        <h3>Day</h3>
+        <div class="chips days" id="days"></div>
+      </div>
+      <div>
+        <h3 id="listTitle">Places</h3>
+        <div class="place-list" id="placeList"></div>
+      </div>
+    </aside>
+  </div>
+  <p class="credits">Photos come from Wikipedia and Wikimedia Commons contributors. Licences vary by file (CC0, CC BY-SA and others); each card links to its photo's source page. The map is hand-drawn from approximate coordinates. Use each card's Google Maps link for exact locations.</p>
+</section>
+
+<!-- ITINERARY -->
+<section class="section" id="tab-itinerary" hidden>
+  <h2 class="section-title">The itinerary</h2>
+  <p class="section-subtitle">Bangkok → Phuket (with a Koh Yao Yai day trip) → Krabi · Sat 1 – Sat 8 May 2027</p>
+  <div class="days-col">
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge bkk">Bangkok · Day 1 · Sat 1 May</span><button class="on-map" data-day="1">📍 On the map</button></div>
+      <h3>Arrive, regroup, Reclining Buddha</h3>
+      <ul>
+        <li>Flights land through the day; check in on <b>Sukhumvit (Soi 11–21)</b>, rest, pool time</li>
+        <li>Late afternoon: <b>Wat Pho</b> and the 46 m Reclining Buddha</li>
+        <li>Reunion dinner at an Indian restaurant on Sukhumvit</li>
+        <li>After dinner: taxi (~30 min) to <b>Asiatique</b> for the Ferris wheel and river views</li>
+      </ul>
+      <div class="veg-tip"><span>🥗</span><span><b>Veg:</b> Bawarchi (Soi 21), Dosa King, Saras; Punjab Sweets in Pahurat for pure-veg thali</span></div>
+    </article>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge bkk">Bangkok · Day 2 · Sun 2 May</span><button class="on-map" data-day="2">📍 On the map</button></div>
+      <h3>Grand Palace, sharks, night market</h3>
+      <ul>
+        <li>8:30 AM: <b>Grand Palace &amp; Wat Phra Kaew</b> at opening, before the heat. Cover shoulders and knees</li>
+        <li>Late morning: <b>SEA LIFE Ocean World</b> under Siam Paragon (air-conditioned)</li>
+        <li>Afternoon: naps and the hotel pool</li>
+        <li>Evening: <b>Jodd Fairs</b> night market or a relaxed Sukhumvit dinner. Pack for Phuket</li>
+      </ul>
+    </article>
+    <div class="hop-line">✈️ Day 3 morning · Bangkok → Phuket · ~1.5 hr</div>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge hkt">Phuket · Day 3 · Mon 3 May</span><button class="on-map" data-day="3">📍 On the map</button></div>
+      <h3>Fly south, first beach afternoon</h3>
+      <ul>
+        <li>Morning flight to Phuket (HKT); two vans to <b>Kata</b> (~1 hr), check in by lunch</li>
+        <li>Afternoon: <b>Kata Noi beach</b>, soft sand and shallow water for under-8s</li>
+        <li>Late afternoon: resort pool and kids' club</li>
+      </ul>
+      <div class="veg-tip"><span>🥗</span><span><b>Veg dinner:</b> Tandoori Flames (Kata). Resort kitchens make dal, paneer and roti on request</span></div>
+    </article>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge hkt">Phuket · Day 4 · Tue 4 May</span><button class="on-map" data-day="4">📍 On the map</button></div>
+      <h3>Koh Yao Yai day trip</h3>
+      <ul>
+        <li>8:30 AM van to <b>Ao Po Grand Marina</b> (~50 min), speedboat ~20 min to Koh Yao Yai</li>
+        <li>Resort beach day: ask <b>Santhiya</b> or <b>Elixir</b> about a day pass with lunch and boats</li>
+        <li>Walk out on the <b>Laem Had sandbar</b> at low tide for the group photo</li>
+        <li>Optional: a private speedboat that adds <b>James Bond Island</b> (Phang Nga Bay)</li>
+        <li>Under-4s: a 15-min longtail to <b>Coral Island</b> from Chalong Pier instead</li>
+      </ul>
+      <div class="veg-tip"><span>🥗</span><span><b>Veg:</b> pre-order lunch with the resort and carry snacks. The island has few shops</span></div>
+    </article>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge hkt">Phuket · Day 5 · Wed 5 May</span><button class="on-map" data-day="5">📍 On the map</button></div>
+      <h3>Water park and Old Town</h3>
+      <ul>
+        <li>Morning: <b>Splash Jungle</b>: wave pool, lazy river, shallow kids' zone</li>
+        <li>Lunch and an afternoon stroll in <b>Old Phuket Town</b> (Soi Rommanee)</li>
+        <li>Pool, naps, pack for Krabi</li>
+        <li>Optional evening: <b>Phuket FantaSea</b> show + buffet with a veg section</li>
+      </ul>
+    </article>
+    <div class="hop-line">🚐 Day 6 morning · Phuket → Ao Nang · 2.5–3.5 hr by van</div>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge kbv">Krabi · Day 6 · Thu 6 May</span><button class="on-map" data-day="6">📍 On the map</button></div>
+      <h3>Over to Krabi's limestone cliffs</h3>
+      <ul>
+        <li>9 AM: two private vans from Kata to <b>Ao Nang</b>, arriving for lunch</li>
+        <li>Afternoon: pool and naps</li>
+        <li>Sunset: walk the <b>Ao Nang beachfront</b> as the longtails come in</li>
+        <li>Optional for older kids: mangrove kayaking at <b>Ao Thalane</b></li>
+      </ul>
+      <div class="veg-tip"><span>🥗</span><span><b>Veg:</b> Govinda's and Little Govinda's (pure veg), Pure Vegetarian Dosa Corner, Pakwan</span></div>
+    </article>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge kbv">Krabi · Day 7 · Fri 7 May</span><button class="on-map" data-day="7">📍 On the map</button></div>
+      <h3>Railay and the 4-island longtail loop</h3>
+      <ul>
+        <li>Two chartered longtails: <b>Phra Nang Cave Beach</b>, <b>Tup Island sandbar</b>, <b>Chicken Island</b>, <b>Poda Island</b></li>
+        <li>Life jackets for every child; ask for a boat with a canopy</li>
+        <li>Under-4s: a short hop to <b>Railay</b> and back by lunch</li>
+        <li>Evening: farewell dinner, one long table for 19</li>
+      </ul>
+    </article>
+    <article class="day-card">
+      <div class="day-head"><span class="day-badge kbv">Krabi · Day 8 · Sat 8 May</span><button class="on-map" data-day="8">📍 On the map</button></div>
+      <h3>Last swim, flights home</h3>
+      <ul>
+        <li>Breakfast, last swim, checkout</li>
+        <li><b>Krabi Airport (KBV)</b> is ~30–40 min away. Check IndiGo's direct flights to BOM, BLR and DEL; Hyderabad connects via Bangkok</li>
+        <li>No suitable KBV flight? Van back to Phuket airport (~2.5–3.5 hr)</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section class="section" id="tab-budget" hidden>
+  <h2 class="section-title">Budget</h2>
+  <p class="section-subtitle">Estimates from the trip plan, May 2027 low season, in INR</p>
+
+  <div class="calc">
+    <div class="fields">
+      <div>
+        <label for="cCity">Flying from</label>
+        <select id="cCity">
+          <option value="DEL">Delhi</option>
+          <option value="BLR" selected>Bangalore</option>
+          <option value="HYD">Hyderabad</option>
+          <option value="BOM">Mumbai / Pune</option>
+        </select>
+      </div>
+      <div>
+        <label>Kids travelling</label>
+        <div class="seg" id="cKids"><button data-k="0">0</button><button data-k="1" class="on">1</button><button data-k="2">2</button><button data-k="3">3</button></div>
+      </div>
+      <div>
+        <label for="cLevel">Comfort level</label>
+        <input type="range" id="cLevel" min="0" max="100" value="40">
+        <div class="range-ends"><span>Thrifty</span><span>Splurge</span></div>
+      </div>
+    </div>
+    <div class="result">
+      <div class="hand">our family, roughly</div>
+      <div class="big" id="cOut">₹0</div>
+      <div class="small" id="cNote"></div>
+    </div>
+  </div>
+
+  <div class="city-grid">
+    <div class="city-card"><div class="c">Delhi</div><div class="a">₹64K–1.05L</div></div>
+    <div class="city-card"><div class="c">Bangalore</div><div class="a">₹66K–1.08L</div></div>
+    <div class="city-card"><div class="c">Hyderabad</div><div class="a">₹66K–1.08L</div></div>
+    <div class="city-card"><div class="c">Mumbai / Pune</div><div class="a">₹69K–1.12L</div></div>
+  </div>
+
+  <h3 class="h3">Per adult, by category</h3>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Category</th><th>INR</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>✈️ International return</td><td class="num">16,000–27,000</td><td>Into Bangkok, home from Krabi. Delhi cheapest, Mumbai highest</td></tr>
+        <tr><td>✈️ Bangkok → Phuket</td><td class="num">2,000–4,000</td><td>AirAsia or Thai Airways, all 19 on one flight</td></tr>
+        <tr><td>🏨 Hotels, 7 nights</td><td class="num">20,000–33,000</td><td>Sukhumvit hotel, Kata resort, Ao Nang resort</td></tr>
+        <tr><td>🚐 Vans + KYY boat</td><td class="num">500–1,000</td><td>Phuket → Krabi vans split 19 ways, shared speedboat. Get quotes</td></tr>
+        <tr><td>🍛 Food, 8 days</td><td class="num">8,000–14,000</td><td>Indian veg restaurants + resort meals</td></tr>
+        <tr><td>🎡 Activities</td><td class="num">10,000–16,000</td><td>Temples, aquarium, KYY day trip, water park, Krabi islands</td></tr>
+        <tr><td>🚕 Local transport</td><td class="num">2,000–3,500</td><td>Taxis and airport transfers</td></tr>
+        <tr><td>🛡️ Travel insurance</td><td class="num">1,500–2,500</td><td>Recommended for every family</td></tr>
+        <tr><td>🛍️ Shopping &amp; misc</td><td class="num">4,000–8,000</td><td>Souvenirs, massages, snacks</td></tr>
+        <tr class="total"><td>Total per adult</td><td class="num">64,000–1,12,000</td><td>Depends on departure city</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="h3">Per couple</h3>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Scenario</th><th>INR</th></tr></thead>
+      <tbody>
+        <tr><td>Couple only</td><td class="num">1,30,000–2,20,000</td></tr>
+        <tr><td>Couple + 1 child (3–8)</td><td class="num">1,60,000–2,45,000</td></tr>
+        <tr><td>Couple + 2 children (3–8)</td><td class="num">1,90,000–2,85,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3 class="h3">Group savings</h3>
+  <ul class="bullets">
+    <li>Hotel group rates: 10–15% off for 6+ rooms</li>
+    <li>Group bookings for tours and the water park: 10–20% off</li>
+    <li>Shared airport vans, Phuket → Krabi vans and boats</li>
+    <li>Pune couples: add ~1,500–2,500 per person for the Pune–Mumbai airport transfer</li>
+    <li>Krabi return fares assume about the same as Phuket. Check once IndiGo's Krabi schedule is confirmed</li>
+  </ul>
+</section>
+
+<!-- TIPS -->
+<section class="section" id="tab-tips" hidden>
+  <h2 class="section-title">Tips</h2>
+  <p class="section-subtitle">Food, kids, boats and the small things that make a group trip smooth</p>
+  <div class="tip-grid">
+    <div class="tip-card"><h4>🥗 Veg food, city by city</h4>
+      <ul>
+        <li><b>Bangkok:</b> Sukhumvit Soi 11–21 has 20+ Indian places: Bawarchi, Dosa King, Saras. Punjab Sweets in Pahurat</li>
+        <li><b>Phuket:</b> Tandoori Flames (Kata), Kinnaree, Royal Indian. Resorts make dal and roti on request</li>
+        <li><b>Koh Yao Yai:</b> pre-order lunch and carry snacks</li>
+        <li><b>Krabi:</b> Govinda's, Little Govinda's, Dosa Corner, Pakwan</li>
+      </ul></div>
+    <div class="tip-card"><h4>🌊 Boats in May</h4>
+      <p>The Andaman monsoon starts around now, so some days are choppy. Keep Day 4 and Day 7 swappable with a beach day, book tours that refund for weather, and swim only between the lifeguard flags.</p></div>
+    <div class="tip-card"><h4>👶 With under-8s</h4>
+      <ul>
+        <li>Plan a nap or pool break every afternoon in 32 °C heat</li>
+        <li>Child life jackets on every boat; ask for canopies</li>
+        <li>Water shoes for wet longtail landings</li>
+        <li>Diapers and ORS are cheap at 7-Eleven and pharmacies</li>
+      </ul></div>
+    <div class="tip-card"><h4>🚐 Getting around as 19</h4>
+      <ul>
+        <li>Two 10-seat vans for every transfer, with luggage space</li>
+        <li>Phuket → Ao Nang by road takes 2.5–3.5 hr. The ferry via Phi Phi takes 4–4.5 hr and is harder with bags</li>
+        <li>Koh Yao Yai speedboats leave from Ao Po Grand Marina</li>
+      </ul></div>
+    <div class="tip-card"><h4>💵 Money</h4>
+      <p>ATMs charge about 220 THB per withdrawal, so take out larger amounts. SuperRich in Bangkok has good exchange rates. Longtails, park fees and Koh Yao Yai are mostly cash-only.</p></div>
+    <div class="tip-card"><h4>🛂 Entry</h4>
+      <p>Indian passport holders currently get visa-free entry. Check the allowed stay and the Thailand Digital Arrival Card requirement shortly before you fly; both rules have changed recently.</p></div>
+    <div class="tip-card"><h4>🎒 Pack</h4>
+      <p>Reef-safe SPF 50+, DEET repellent, light cotton, a compact umbrella, dry bags, water shoes, a universal adapter (Type A/B/C, 220 V), and modest clothes for temples.</p></div>
+    <div class="tip-card"><h4>📅 Booking timeline</h4>
+      <ul>
+        <li>By Jan 2027: international flights, BKK → HKT</li>
+        <li>By Feb 2027: hotels in Bangkok, Phuket, Ao Nang</li>
+        <li>By Mar 2027: water park, FantaSea</li>
+        <li>By Apr 2027: KYY day trip, vans, Krabi island tour</li>
+      </ul></div>
+  </div>
+  <h3 class="h3">Thai phrases <span class="hand" style="font-size:1.1rem;color:var(--fg-muted)">tap to show the waiter</span></h3>
+  <div class="phrases" id="phrases"></div>
+</section>
+
+<!-- GROUP -->
+<section class="section" id="tab-group" hidden>
+  <h2 class="section-title">Our group</h2>
+  <p class="section-subtitle">6 couples + 7 kids · 19 travellers from four cities</p>
+  <div class="group-grid">
+    <div class="group-card"><div class="gc-city">🛫 Bangalore · 2 couples</div><div class="gc-detail">Out: BLR → BKK direct · Home: KBV → BLR (IndiGo direct if running) or via BKK</div></div>
+    <div class="group-card"><div class="gc-city">🛫 Pune · 2 couples</div><div class="gc-detail">Out: BOM → BKK · Home: KBV → BOM (IndiGo direct if running) or via BKK · ~3 hr to Mumbai airport</div></div>
+    <div class="group-card"><div class="gc-city">🛫 Hyderabad · 1 couple</div><div class="gc-detail">Out: HYD → BKK · Home: KBV → HYD via Bangkok</div></div>
+    <div class="group-card"><div class="gc-city">🛫 Delhi · 1 couple</div><div class="gc-detail">Out: DEL → BKK direct · Home: KBV → DEL (IndiGo direct if running) or via BKK</div></div>
+  </div>
+  <h3 class="h3">Pre-trip checklist</h3>
+  <div class="progress"><i id="chkBar"></i></div>
+  <div id="checklist"></div>
+</section>
+
+<!-- JOURNAL -->
+<section class="section" id="tab-journal" hidden>
+  <h2 class="section-title">Trip journal</h2>
+  <p class="section-subtitle">Notes and memories, saved in this browser only</p>
+  <div class="compose">
+    <label for="jText" class="hand" style="font-size:1.1rem;color:var(--fg-muted)">Dear diary…</label>
+    <textarea id="jText" placeholder="The kids found a monitor lizard in Lumpini Park…"></textarea>
+    <div class="compose-row">
+      <div class="stickers" id="jStk"></div>
+      <div style="display:flex;gap:0.5rem;align-items:center">
+        <select id="jDay" aria-label="Which day">
+          <option value="">Before the trip</option>
+          <option>Day 1 · Bangkok</option><option>Day 2 · Bangkok</option>
+          <option>Day 3 · Phuket</option><option>Day 4 · Koh Yao Yai</option><option>Day 5 · Phuket</option>
+          <option>Day 6 · Krabi</option><option>Day 7 · Krabi islands</option><option>Day 8 · Home</option>
+        </select>
+        <button class="btn primary" id="jAdd">Stick it in</button>
+      </div>
+    </div>
+  </div>
+  <div class="entries" id="entries"></div>
+</section>
+
+<div class="footer-deco">🌴 🐘 🛶 🥭</div>
+
+<script>
+(function () {
+'use strict';
+const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const $ = s => document.querySelector(s);
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+/* ---------------- Tabs ---------------- */
+const tabs = ['map', 'itinerary', 'budget', 'tips', 'group', 'journal'];
+function showTab(name) {
+  tabs.forEach(t => { document.getElementById('tab-' + t).hidden = t !== name; });
+  document.querySelectorAll('#nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  store.set('th27-tab2', name);
+}
+document.querySelectorAll('#nav button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
+const savedTab = store.get('th27-tab2', 'map');
+showTab(tabs.includes(savedTab) ? savedTab : 'map');
+
+/* ---------------- Map data ---------------- */
+const VIEWS = {
+  overview: { label: 'Whole route', icon: '🗺️', b: [14.55, 7.15, 96.6, 102.6],
+    note: '<b>The big picture.</b> Everyone flies into Bangkok, hops south to Phuket, then rides two vans to Krabi. Tap a city bubble to zoom in.' },
+  bangkok: { label: 'Bangkok', icon: '🛕', b: [13.796, 13.675, 100.48, 100.58], days: [1, 2],
+    note: '<b>Bangkok · 2 nights.</b> Temples by the river, a shark tunnel under a mall, and Bangkok’s best Indian food street around the hotel.' },
+  phuket: { label: 'Phuket', icon: '🏖️', b: [8.22, 7.72, 98.24, 98.645], days: [3, 4, 5],
+    note: '<b>Phuket · 3 nights.</b> Beach base at Kata, a speedboat day to Koh Yao Yai, a water park and the pastel Old Town.' },
+  krabi: { label: 'Krabi', icon: '🛶', b: [8.165, 7.915, 98.75, 98.952], days: [6, 7, 8],
+    note: '<b>Krabi · 2 nights.</b> Ao Nang’s veg restaurants, sunset on the promenade, and a longtail loop to sandbars and cliff beaches.' }
+};
+const CATS = {
+  stay:   { label: 'Stays', icon: '🏨' },
+  see:    { label: 'Sights', icon: '🛕' },
+  eat:    { label: 'Veg food', icon: '🍛' },
+  play:   { label: 'Fun', icon: '🎡' },
+  stroll: { label: 'Walks', icon: '👣' },
+  move:   { label: 'Getting there', icon: '🚤' }
+};
+const ILL = {
+  stay: 'linear-gradient(135deg, var(--accent-soft), var(--gold-soft))',
+  see: 'linear-gradient(135deg, var(--gold-soft), var(--sand))',
+  eat: 'linear-gradient(135deg, var(--teal-soft), var(--gold-soft))',
+  play: 'linear-gradient(135deg, var(--sea), var(--accent-soft))',
+  stroll: 'linear-gradient(135deg, var(--park), var(--sand))',
+  move: 'linear-gradient(135deg, var(--sea), var(--sand))'
+};
+function P(v, lat, lon) { const [t, bt, l, r] = VIEWS[v].b; return [(lon - l) / (r - l) * 400, (t - lat) / (t - bt) * 500]; }
+
+const PINS = [
+  /* Overview bubbles */
+  { id: 'o-bkk', v: 'overview', kind: 'city', cat: 'stay', go: 'bangkok', at: [13.75, 100.5], name: 'Bangkok', nights: '2N', days: [1, 2], photo: 'grand-palace', credit: '0005574_-_Wat_Phra_Kaew_006.jpg', emoji: '🛕',
+    tip: 'Everyone meets here on 1 May. Two nights on Sukhumvit: Wat Pho, the Grand Palace, SEA LIFE and night markets.', q: 'Sukhumvit Soi 11 Bangkok', wiki: 'Bangkok' },
+  { id: 'o-hkt', v: 'overview', kind: 'city', cat: 'stay', go: 'phuket', at: [7.9, 98.34], off: [-56, -14], name: 'Phuket', nights: '3N', days: [3, 4, 5], photo: 'kata', credit: 'Kata_beach_morning_2.jpg', emoji: '🏖️',
+    tip: 'Beach base at Kata with family resorts, kids’ clubs and calm Kata Noi beach. Koh Yao Yai is a speedboat day trip from here.', q: 'Kata Beach Phuket', wiki: 'Phuket_province' },
+  { id: 'o-kbv', v: 'overview', kind: 'city', cat: 'stay', go: 'krabi', at: [8.04, 98.84], off: [70, -36], name: 'Krabi', nights: '2N', days: [6, 7, 8], photo: 'railay', credit: 'Railay_Beach_5.jpg', emoji: '🛶',
+    tip: 'Ao Nang for the finale: limestone cliffs, longtail boats and pure-veg Indian restaurants a short walk from the beach.', q: 'Ao Nang Krabi', wiki: 'Ao_Nang' },
+  { id: 'o-kyy', v: 'overview', kind: 'mini', cat: 'play', go: 'phuket', at: [8.0, 98.59], off: [6, -58], lblLeft: true, name: 'Koh Yao Yai', sub: 'day trip', days: [4], photo: 'kyy-island', credit: 'Ko_Yao_Yai.jpg', emoji: '🏝️',
+    tip: 'Quiet island ~20 min by speedboat from Ao Po on Phuket. A beach and sandbar day, back for dinner.', q: 'Koh Yao Yai', wiki: 'Ko_Yao_Yai' },
+  { id: 'o-pp', v: 'overview', kind: 'mini', cat: 'move', at: [7.74, 98.77], off: [78, 16], name: 'Phi Phi', sub: 'ferry option', days: [6], opt: true, photo: 'phi-phi', credit: 'KohPhiPhi.JPG', emoji: '⛴️',
+    tip: 'The scenic alternative for Day 6: ferry Phuket → Phi Phi → Ao Nang, about 4–4.5 hr door to door. Only if the sea is calm.', q: 'Phi Phi Islands', wiki: 'Phi_Phi_Islands' },
+
+  /* Bangkok */
+  { id: 'b-hotel', v: 'bangkok', cat: 'stay', at: [13.7437, 100.5555], name: 'Our hotel on Sukhumvit', days: [1, 2], emoji: '🏨',
+    tip: 'Base for two nights near BTS Nana / Asok: malls with AC play areas and Bangkok’s biggest cluster of Indian restaurants. Book 6 family rooms in one mid-range hotel.',
+    kid: 'Pick a hotel with a pool. It’s the afternoon reset button.', q: 'Sukhumvit Soi 11 Bangkok' },
+  { id: 'b-food', v: 'bangkok', cat: 'eat', at: [13.7395, 100.562], name: 'Veg dinners on Sukhumvit', days: [1, 2], emoji: '🍛',
+    tip: 'Reunion dinner on Day 1. Bawarchi (Soi 21), Dosa King and Saras for South Indian. Budget about 300–500 THB a person.',
+    veg: 'At Thai places say “jay” (vegan) and “mai sai nam pla” (no fish sauce).', q: 'Dosa King Sukhumvit Bangkok' },
+  { id: 'b-watpho', v: 'bangkok', cat: 'see', at: [13.7455, 100.4945], name: 'Wat Pho · Reclining Buddha', days: [1], photo: 'wat-pho', credit: 'พระพุทธไสยาสวัดพระเชตุพน.jpg', emoji: '🛕',
+    tip: 'The 46 m golden Reclining Buddha. An easy late-afternoon visit on Day 1. Entry is a few hundred baht for adults; check the current price.',
+    kid: 'Kids love dropping coins into the 108 bronze bowls along the hall.', q: 'Wat Pho Bangkok', wiki: 'Wat_Pho' },
+  { id: 'b-palace', v: 'bangkok', cat: 'see', at: [13.752, 100.491], name: 'Grand Palace & Wat Phra Kaew', days: [2], photo: 'grand-palace', credit: '0005574_-_Wat_Phra_Kaew_006.jpg', emoji: '👑',
+    tip: 'Arrive at 8:30 AM opening to beat heat and crowds. About 500 THB per adult; small children are usually free.',
+    kid: 'The dress code is strict: long trousers or skirts and covered shoulders, kids included.', q: 'Grand Palace Bangkok', wiki: 'Grand_Palace' },
+  { id: 'b-arun', v: 'bangkok', cat: 'see', at: [13.7437, 100.487], name: 'Wat Arun', days: [2], opt: true, photo: 'wat-arun', credit: 'เจดีย์ประธานทรงปรางค์วัดอรุณ2.jpg', emoji: '🌅',
+    tip: 'The Temple of Dawn, right across the river from Wat Pho. A cross-river ferry from Tha Tien pier takes a few minutes and costs a few baht.', q: 'Wat Arun Bangkok', wiki: 'Wat_Arun' },
+  { id: 'b-khaosan', v: 'bangkok', cat: 'stroll', at: [13.759, 100.497], name: 'Khao San Road', days: [2], opt: true, photo: 'khaosan', credit: '2016_Bangkok,_Dystrykt_Phra_Nakhon,_Ulica_Khaosan_(08).jpg', emoji: '👣',
+    tip: 'The famous backpacker street: a quick early-evening walk with street snacks and fruit shakes. It gets loud after 9 PM, so skip it with tired toddlers.', q: 'Khao San Road', wiki: 'Khaosan_Road' },
+  { id: 'b-pahurat', v: 'bangkok', cat: 'eat', at: [13.7445, 100.501], name: 'Little India · Pahurat', days: [1, 2], opt: true, photo: 'phahurat', credit: 'Gurudwara_Siri_Guru_Singh_Sabha.JPG', emoji: '🪔',
+    tip: 'Bangkok’s Little India grew up around the Siri Guru Singh Sabha gurdwara. Punjab Sweets serves pure-veg thali and mithai. It pairs well with Wat Pho.',
+    veg: 'Pure veg: Punjab Sweets.', q: 'Punjab Sweets Pahurat Bangkok', wiki: 'Phahurat' },
+  { id: 'b-river', v: 'bangkok', cat: 'move', at: [13.735, 100.506], name: 'Chao Phraya river boats', days: [1, 2], photo: 'chao-phraya', credit: 'Chao_Phraya_River_-_Bangkok_-_northwards_-_from_King_Taksin_Bridge_-_2021.jpg', emoji: '⛴️',
+    tip: 'Chao Phraya Express boats link Tha Tien (Wat Pho), ICONSIAM and Sathorn pier (BTS Saphan Taksin). They’re cheap and breezy, and much easier than three taxis for 19 people.',
+    kid: 'The ride itself is an attraction for small kids.', q: 'Sathorn Pier Bangkok', wiki: 'Chao_Phraya_River' },
+  { id: 'b-icon', v: 'bangkok', cat: 'play', at: [13.7267, 100.5106], name: 'ICONSIAM', days: [2], opt: true, photo: 'iconsiam', credit: 'Magnolias_Waterfront_Residences_Iconsiam.jpg', emoji: '🛍️',
+    tip: 'A riverside mega-mall with an indoor floating-market food hall (SookSiam) on the ground floor. Air-conditioned, easy toilets, lots of choice.', q: 'ICONSIAM', wiki: 'Iconsiam' },
+  { id: 'b-asiatique', v: 'bangkok', cat: 'play', at: [13.7046, 100.503], name: 'Asiatique The Riverfront', days: [1], photo: 'asiatique', credit: 'Asiatique_(II).jpg', emoji: '🎡',
+    tip: 'Night bazaar with a big Ferris wheel and river views. About 30 min by taxi from Sukhumvit; Asiatique has also run a shuttle boat from Sathorn pier.',
+    kid: 'The Ferris wheel at night is the Day 1 highlight.', q: 'Asiatique The Riverfront', wiki: 'Asiatique' },
+  { id: 'b-sealife', v: 'bangkok', cat: 'play', at: [13.7462, 100.5347], name: 'SEA LIFE Ocean World', days: [2], photo: 'sealife', credit: 'Siam_Ocean_World_Enterance_2011.jpg', emoji: '🦈',
+    tip: 'Under Siam Paragon mall at BTS Siam: shark tunnel, penguins, glass-bottom boat. About 1,090 THB per adult and 890 per child online.',
+    kid: 'A cool, indoor escape for the hottest part of Day 2.', q: 'SEA LIFE Bangkok Ocean World', wiki: 'Sea_Life_Bangkok_Ocean_World' },
+  { id: 'b-lumpini', v: 'bangkok', cat: 'stroll', at: [13.7315, 100.5415], name: 'Lumpini Park morning walk', days: [2], opt: true, photo: 'lumphini', credit: 'Aerial_view_of_Lumphini_Park.jpg', emoji: '🦎',
+    tip: 'An early stroll before the heat: playgrounds, swan pedal boats and joggers. Five minutes from BTS Sala Daeng.',
+    kid: 'Big monitor lizards sunbathe by the lake, and the kids will talk about them all week.', q: 'Lumpini Park', wiki: 'Lumphini_Park' },
+  { id: 'b-jodd', v: 'bangkok', cat: 'eat', at: [13.7575, 100.5665], name: 'Jodd Fairs night market', days: [2], photo: 'night-market', credit: 'Train_Night_Market_Ratchada_(34079339800).jpg', photoNote: 'Photo: Talad Rot Fai Ratchada, a similar night market', emoji: '🥭',
+    tip: 'Colourful food stalls on Rama 9: mango sticky rice, coconut ice cream, fruit. Arrive around 6 PM, when there’s still room for strollers.', q: 'Jodd Fairs Rama 9' },
+  { id: 'b-bkk', v: 'bangkok', cat: 'move', at: [13.721, 100.574], name: 'Suvarnabhumi Airport (BKK) →', days: [1], emoji: '✈️',
+    tip: 'About 25 km east of this map, roughly 45 min by taxi. Every couple lands on 1 May. Share arrival times in the WhatsApp group so vans can be pooled.', q: 'Suvarnabhumi Airport', wiki: 'Suvarnabhumi_Airport' },
+
+  /* Phuket */
+  { id: 'p-hkt', v: 'phuket', cat: 'move', at: [8.113, 98.317], name: 'Phuket Airport (HKT)', days: [3], emoji: '✈️',
+    tip: 'The Day 3 morning flight lands here. Kata is about 1 hr by van; book two 10-seaters for 19 people plus luggage.', q: 'Phuket International Airport', wiki: 'Phuket_International_Airport' },
+  { id: 'p-splash', v: 'phuket', cat: 'play', at: [8.14, 98.296], name: 'Splash Jungle water park', days: [5], emoji: '💦',
+    tip: 'Mai Khao, about 45 min from Kata. Wave pool, lazy river and a shallow kids’ zone. About 1,490 THB per adult and 750 per child.',
+    veg: 'Park food has little veg, so pack snacks.', q: 'Splash Jungle Water Park Phuket' },
+  { id: 'p-fantasea', v: 'phuket', cat: 'play', at: [7.956, 98.287], name: 'Phuket FantaSea', days: [5], opt: true, emoji: '🎭',
+    tip: 'Evening show in Kamala with Thai legends, acrobats and fireworks, plus a buffet with a veg section. About 1,800 THB per person. It’s a late night for under-4s.', q: 'Phuket FantaSea' },
+  { id: 'p-patong', v: 'phuket', cat: 'see', at: [7.896, 98.297], name: 'Patong Beach', days: [3, 5], opt: true, photo: 'patong', credit: 'Patong_Beach.jpg', emoji: '🏄',
+    tip: 'Phuket’s busiest beach and the Jungceylon mall. Fine for a daytime look, but the Bangla Road end turns into nightlife after dark, so skip it with kids.', q: 'Patong Beach', wiki: 'Patong' },
+  { id: 'p-oldtown', v: 'phuket', cat: 'stroll', at: [7.8846, 98.387], name: 'Old Phuket Town', days: [5], photo: 'old-town', credit: 'Soi_Rommanee,_Phuket_Town.jpg', emoji: '🏮',
+    tip: 'Pastel Sino-Portuguese shophouses on Soi Rommanee and Thalang Road, street art and ice-cream cafés. Flat and stroller-friendly; go before 11 AM or after 4 PM.',
+    veg: 'Royal Indian is nearby for lunch.', q: 'Soi Rommanee Phuket', wiki: 'Phuket_Old_Town' },
+  { id: 'p-resort', v: 'phuket', cat: 'stay', at: [7.825, 98.30], name: 'Our resort at Kata', days: [3, 4, 5], photo: 'kata', credit: 'Kata_beach_morning_2.jpg', emoji: '🏨',
+    tip: 'Three nights at Kata: calmer water than Patong, family resorts with kids’ clubs and several pools. Ask for adjoining rooms so the kids can roam.',
+    veg: 'Tandoori Flames (Kata) for North Indian. Resort kitchens make dal, paneer and roti on request.', q: 'Kata Beach Phuket', wiki: 'Kata_Beach' },
+  { id: 'p-katanoi', v: 'phuket', cat: 'play', at: [7.80, 98.298], name: 'Kata Noi beach', days: [3], emoji: '🏖️',
+    tip: 'Soft sand, gentle waves and shallow water for the Day 3 afternoon. Sun loungers cost about 200 THB a pair.',
+    kid: 'In May, swim only between the lifeguard flags. Red flags mean rip currents.', q: 'Kata Noi Beach' },
+  { id: 'p-buddha', v: 'phuket', cat: 'see', at: [7.835, 98.325], name: 'Big Buddha', days: [5], opt: true, photo: 'big-buddha', credit: 'Big_Buddha_-_Phuket.jpg', emoji: '🙏',
+    tip: 'A 45 m white-marble Buddha on Nakkerd Hill with views over Chalong Bay, about 20 min from Kata. Entry is by donation.',
+    kid: 'Cover shoulders and knees; sarongs are usually lent at the gate.', q: 'Big Buddha Phuket' },
+  { id: 'p-promthep', v: 'phuket', cat: 'stroll', at: [7.762, 98.305], name: 'Promthep Cape sunset', days: [3, 5], opt: true, emoji: '🌅',
+    tip: 'Phuket’s famous sunset viewpoint, 20 min south of Kata. Arrive 45 min early for parking and a spot by the railing.',
+    kid: 'There are steep drops beyond the railings, so hold small hands.', q: 'Promthep Cape Phuket' },
+  { id: 'p-coral', v: 'phuket', cat: 'play', at: [7.745, 98.37], name: 'Coral Island (Koh Hae)', days: [4], opt: true, emoji: '🐠',
+    tip: 'The Day 4 alternative for toddlers: a 15-min longtail from Chalong Pier, calm water and a shallow reef for wading.', q: 'Coral Island Koh Hae Phuket' },
+  { id: 'p-aopo', v: 'phuket', cat: 'move', at: [8.07, 98.447], name: 'Ao Po Grand Marina', days: [4], emoji: '⚓',
+    tip: 'Speedboats for Koh Yao Yai leave from here. Santhiya’s transfer takes about 20 min. It’s about 50 min by van from Kata, so leave by 8:30 AM.', q: 'Ao Po Grand Marina' },
+  { id: 'p-kyy', v: 'phuket', cat: 'play', at: [8.03, 98.558], name: 'Koh Yao Yai beach day', days: [4], photo: 'kyy-pier', credit: 'Koh_Yao_Yai_Peer,_Tambon_Ko_Yao_Yai,_Thailand_(Unsplash).jpg', photoNote: 'Photo: a pier on Koh Yao Yai at sunset', emoji: '🏝️',
+    tip: 'Ask Santhiya (Loh Pared Beach) or Elixir (Bo Le Bay) whether they sell a day pass with lunch and boat transfers. Back in Phuket by about 5 PM.',
+    veg: 'Pre-order a veg lunch and carry snacks; the island has few shops.', q: 'Santhiya Koh Yao Yai Resort', wiki: 'Ko_Yao_Yai' },
+  { id: 'p-laemhad', v: 'phuket', cat: 'stroll', at: [8.09, 98.585], name: 'Laem Had sandbar', days: [4], photo: 'kyy-island', credit: 'Ko_Yao_Yai.jpg', photoNote: 'Photo: a beach on Koh Yao Yai', emoji: '📸',
+    tip: 'A strip of sand you can walk out on at low tide. Bring a frisbee and take the group photo here.',
+    kid: 'It only appears at low tide, so check tide tables before you book the boat.', q: 'Laem Had Beach Koh Yao Yai' },
+  { id: 'p-jamesbond', v: 'phuket', cat: 'see', at: [8.18, 98.49], name: 'James Bond Island option', days: [4], opt: true, photo: 'james-bond', credit: 'Isla_Tapu,_Phuket,_Tailandia,_2013-08-20,_DD_36.JPG', emoji: '🗿',
+    tip: 'Day 4 Option B: charter a private speedboat that adds Khao Phing Kan (James Bond Island) and the Hong Island lagoon in Phang Nga Bay. It makes a longer day, better for kids 5+.', q: 'James Bond Island', wiki: 'Khao_Phing_Kan' },
+
+  /* Krabi */
+  { id: 'k-thalane', v: 'krabi', cat: 'play', at: [8.125, 98.765], name: 'Ao Thalane mangrove kayak', days: [6], opt: true, photo: 'mangrove', credit: 'Sonneratia_alba_-_Manado_(2).JPG', photoNote: 'Illustrative mangrove photo, not Ao Thalane', emoji: '🛶',
+    tip: 'Guided kayaking through calm mangrove channels, about 30 min from Ao Nang. Best for kids 5+ in tandem kayaks.', q: 'Ao Thalane Kayaking Krabi' },
+  { id: 'k-food', v: 'krabi', cat: 'eat', at: [8.047, 98.822], name: 'Ao Nang veg food street', days: [6, 7], emoji: '🍛',
+    tip: 'Govinda’s (pure veg, a few hundred metres from the main beach), Little Govinda’s, Pure Vegetarian Dosa Corner and Pakwan. Govinda’s menu changes day to day.',
+    veg: 'Farewell dinner idea: book a long table for 19 at Pakwan or the resort.', q: "Govinda's Restaurant Ao Nang" },
+  { id: 'k-resort', v: 'krabi', cat: 'stay', at: [8.036, 98.835], name: 'Our resort in Ao Nang', days: [6, 7, 8], emoji: '🏨',
+    tip: 'Two nights in Ao Nang or the quieter Klong Muang / Nopparat Thara strip, for example Centara Grand Beach Resort, Holiday Inn Resort Ao Nang or Avani Ao Nang Cliff. Confirm family or interconnecting rooms.', q: 'Ao Nang Beach resorts' },
+  { id: 'k-beach', v: 'krabi', cat: 'stroll', at: [8.028, 98.812], name: 'Ao Nang sunset promenade', days: [6], photo: 'ao-nang', credit: 'Ao_Nang_beach_panorama_1.jpg', emoji: '🌇',
+    tip: 'Walk the beachfront at sunset as the longtails pull up on the sand, with ice cream and fruit shakes along the strip.', q: 'Ao Nang Beach', wiki: 'Ao_Nang' },
+  { id: 'k-railay', v: 'krabi', cat: 'see', at: [8.011, 98.836], name: 'Railay West', days: [7], photo: 'railay', credit: 'Railay_Beach_5.jpg', emoji: '🧗',
+    tip: 'A 15-min longtail ride from Ao Nang; Railay has no road access. Wet landing, so wear water shoes. Calm sand between towering cliffs.',
+    kid: 'For under-4s this short hop can replace the full island loop.', q: 'Railay Beach', wiki: 'Railay_Beach' },
+  { id: 'k-phranang', v: 'krabi', cat: 'play', at: [8.002, 98.846], name: 'Phra Nang Cave Beach', days: [7], emoji: '🏖️',
+    tip: 'Powder-soft sand under limestone overhangs, shallow and calm. The first stop on the 4-island loop.', q: 'Phra Nang Cave Beach' },
+  { id: 'k-tup', v: 'krabi', cat: 'stroll', at: [7.957, 98.822], name: 'Tup Island sandbar', days: [7], emoji: '🏝️',
+    tip: 'At low tide a path of sand joins Tup and Chicken Island and you can walk across. Ask the boatman to time it with the tide.', q: 'Tup Island Krabi' },
+  { id: 'k-chicken', v: 'krabi', cat: 'see', at: [7.947, 98.808], name: 'Chicken Island', days: [7], emoji: '🐔',
+    tip: 'Koh Kai, a rock shaped like a chicken’s head. Usually a snorkel stop, so life jackets on for the kids.', q: 'Chicken Island Krabi' },
+  { id: 'k-poda', v: 'krabi', cat: 'play', at: [7.968, 98.808], name: 'Poda Island', days: [7], photo: 'poda', credit: 'Poda_island_beach.jpg', emoji: '🥪',
+    tip: 'White beach with a sea stack offshore, the lunch stop. The 4-island charter is estimated at 800–1,500 THB per adult including park fees; confirm when booking.',
+    veg: 'Bring a packed veg lunch from the resort or Govinda’s.', q: 'Poda Island Krabi', wiki: 'Ko_Poda' },
+  { id: 'k-town', v: 'krabi', cat: 'see', at: [8.07, 98.915], name: 'Krabi Town', days: [7], opt: true, emoji: '🦀',
+    tip: 'Riverside town about 25 min from Ao Nang. Its weekend walking-street market is said to start on Friday evenings; check before going.', q: 'Krabi Town Walking Street' },
+  { id: 'k-kbv', v: 'krabi', cat: 'move', at: [8.10, 98.94], name: 'Krabi Airport (KBV) →', days: [8], emoji: '✈️',
+    tip: 'About 30–40 min from Ao Nang. IndiGo has flown direct to Mumbai, Bengaluru and Delhi but paused Jul–Sep 2026; check the live schedule. Hyderabad connects via Bangkok.', q: 'Krabi International Airport', wiki: 'Krabi_International_Airport' }
+];
+const EDGES = [
+  { v: 'phuket', at: [8.205, 98.33], label: '↑ To Krabi · Day 6', go: 'krabi' },
+  { v: 'krabi', at: [8.155, 98.79], label: '↖ Back to Phuket', go: 'phuket', ny: '-3px', nx: '-2px' }
+];
+const BYID = Object.fromEntries(PINS.map(p => [p.id, p]));
+const STAMPABLE = PINS.filter(p => p.v !== 'overview');
+
+/* ---------------- SVG helpers ---------------- */
+const r1 = n => Math.round(n * 10) / 10;
+function pts(v, arr) { return arr.map(([a, b]) => P(v, a, b)); }
+function smooth(p, closed) {
+  const n = p.length, g = i => closed ? p[(i + n) % n] : p[Math.max(0, Math.min(n - 1, i))];
+  let d = 'M' + r1(p[0][0]) + ',' + r1(p[0][1]);
+  const last = closed ? n : n - 1;
+  for (let i = 0; i < last; i++) {
+    const p0 = g(i - 1), p1 = g(i), p2 = g(i + 1), p3 = g(i + 2);
+    d += 'C' + r1(p1[0] + (p2[0] - p0[0]) / 6) + ',' + r1(p1[1] + (p2[1] - p0[1]) / 6) + ' ' +
+         r1(p2[0] - (p3[0] - p1[0]) / 6) + ',' + r1(p2[1] - (p3[1] - p1[1]) / 6) + ' ' + r1(p2[0]) + ',' + r1(p2[1]);
+  }
+  return d + (closed ? 'Z' : '');
+}
+const shape = (v, arr, cls) => `<path class="${cls}" d="${smooth(pts(v, arr), true)}"/>`;
+const line = (v, arr, cls, id) => `<path ${id ? `id="${id}"` : ''} class="${cls}" d="${smooth(pts(v, arr), false)}"/>`;
+function blob(v, lat, lon, rx, ry, cls) { const [x, y] = P(v, lat, lon); return `<ellipse class="${cls || 'land'}" cx="${r1(x)}" cy="${r1(y)}" rx="${rx}" ry="${ry}"/>`; }
+function label(v, lat, lon, text, cls, rot) { const [x, y] = P(v, lat, lon); return `<text class="${cls}" x="${r1(x)}" y="${r1(y)}"${rot ? ` transform="rotate(${rot} ${r1(x)} ${r1(y)})"` : ''}>${text}</text>`; }
+function mover(pathId, glyph, dur, extra) {
+  if (RM) return '';
+  return `<text class="mover" font-size="${(extra && extra.size) || 16}" text-anchor="middle" dominant-baseline="central"><tspan>${glyph}</tspan>` +
+    `<animateMotion dur="${dur}s" repeatCount="indefinite"${extra && extra.rotate ? ' rotate="auto"' : ''}${extra && extra.begin ? ` begin="${extra.begin}"` : ''}><mpath href="#${pathId}"/></animateMotion></text>`;
+}
+function compass() {
+  return `<g transform="translate(366,40)" class="compass"><circle r="17"/><path d="M0,-14 L4,0 L0,14 L-4,0Z"/><path class="n" d="M0,-14 L4,0 L-4,0Z"/><text y="-21" text-anchor="middle">N</text></g>`;
+}
+function scaleBar(px, text) {
+  return `<g transform="translate(${392 - px},486)" class="scale"><path d="M0,-4 V0 H${px} V-4"/><text x="${px / 2}" y="-7" text-anchor="middle">${text}</text></g>`;
+}
+function clouds() {
+  if (RM) return '';
+  const c = (y, s, dur, begin) => `<g class="cloud" opacity="0.55"><path transform="scale(${s})" d="M10,20 a10,10 0 0 1 14,-10 a13,13 0 0 1 24,2 a9,9 0 0 1 4,17 h-40 a8,8 0 0 1 -2,-9z"/>` +
+    `<animateTransform attributeName="transform" type="translate" from="-90 ${y}" to="460 ${y}" dur="${dur}s" begin="${begin}s" repeatCount="indefinite"/></g>`;
+  return c(70, 1.1, 70, -20) + c(300, 0.8, 95, -60);
+}
+function defs() {
+  return `<defs>
+    <pattern id="waves" width="28" height="14" patternUnits="userSpaceOnUse">
+      <path d="M0,7 q7,-5 14,0 t14,0" class="wave"/>
+      ${RM ? '' : '<animateTransform attributeName="patternTransform" type="translate" from="0 0" to="28 0" dur="6s" repeatCount="indefinite"/>'}
+    </pattern>
+    <pattern id="city" width="9" height="9" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="5" height="5" rx="1" class="block"/></pattern>
+  </defs>`;
+}
+const STYLE = `<style>
+  .sea{fill:var(--sea)} .wavefill{fill:url(#waves)} .wave{fill:none;stroke:var(--sea-line);stroke-width:1.2;stroke-linecap:round;opacity:.8}
+  .land{fill:var(--land);stroke:var(--land-edge);stroke-width:1.2} .land2{fill:var(--land);opacity:.65;stroke:var(--land-edge);stroke-width:.8;stroke-dasharray:3 3}
+  .block{fill:var(--land-edge);opacity:.25} .cityfill{fill:url(#city)}
+  .park{fill:var(--park);stroke:var(--land-edge);stroke-width:.6} .gold{fill:var(--gold-soft);stroke:var(--c-see);stroke-width:.8;stroke-dasharray:2 2}
+  .river{fill:none;stroke:var(--river);stroke-width:13;stroke-linecap:round;stroke-linejoin:round} .river-hi{fill:none;stroke:var(--sea);stroke-width:4;stroke-linecap:round;opacity:.7}
+  .chan{fill:none;stroke:var(--river);stroke-width:2.2;stroke-linecap:round;opacity:.85}
+  .road{fill:none;stroke:var(--road);stroke-width:5;stroke-linecap:round} .road-in{fill:none;stroke:var(--card);stroke-width:1.2;stroke-dasharray:4 5;opacity:.7}
+  .rail{fill:none;stroke:var(--rail);stroke-width:3;stroke-linecap:round} .stn{fill:var(--card);stroke:var(--rail);stroke-width:1.6}
+  .border{fill:none;stroke:var(--map-ink);stroke-width:1;stroke-dasharray:1 4;stroke-linecap:round;opacity:.6}
+  .sand{fill:none;stroke:var(--gold);stroke-width:4;stroke-linecap:round;opacity:.55}
+  .rt{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:7 6} .rt-flight{stroke:var(--c-stay)} .rt-van{stroke:var(--c-see)} .rt-boat{stroke:var(--teal)} .rt-walk{stroke:var(--c-stroll);stroke-dasharray:2 5;stroke-width:3} .rt-faint{stroke:var(--map-ink);opacity:.45;stroke-dasharray:3 5}
+  .rt.flow{animation:dash 1.4s linear infinite} @keyframes dash{to{stroke-dashoffset:-26}}
+  .leader{stroke:var(--map-ink);stroke-width:1;stroke-dasharray:2 3;opacity:.7} .dot{fill:var(--map-ink)}
+  .lbl{font-family:var(--f-hand);fill:var(--map-ink);font-size:17px;font-weight:700} .lbl-sea{font-family:var(--f-display);font-style:italic;fill:var(--teal);opacity:.55;font-size:15px}
+  .lbl-big{font-family:var(--f-hand);fill:var(--map-ink);opacity:.4;font-size:30px;font-weight:700;letter-spacing:3px} .lbl-sm{font-family:var(--f-hand);fill:var(--map-ink);font-size:14px;font-weight:700;opacity:.85}
+  .route-txt{font-family:var(--f-hand);font-size:14px;font-weight:700;fill:var(--map-ink)}
+  .compass circle{fill:var(--card);stroke:var(--land-edge);opacity:.9} .compass path{fill:var(--land-edge)} .compass .n{fill:var(--c-stay)} .compass text{font-family:var(--f-mono);font-size:9px;fill:var(--map-ink);font-weight:700}
+  .scale path{fill:none;stroke:var(--map-ink);stroke-width:1.4} .scale text{font-family:var(--f-mono);font-size:9px;fill:var(--map-ink)}
+  .cloud path{fill:var(--card)} .mover{pointer-events:none}
+  @media (prefers-reduced-motion: reduce){.rt.flow{animation:none}}
+</style>`;
+
+/* ---------------- Geography (approximate) ---------------- */
+const PHUKET = [[8.205,98.29],[8.19,98.33],[8.14,98.36],[8.10,98.40],[8.07,98.44],[8.02,98.43],[7.97,98.42],[7.92,98.40],[7.88,98.41],[7.85,98.39],[7.82,98.372],[7.79,98.345],[7.765,98.322],[7.756,98.303],[7.78,98.294],[7.81,98.296],[7.835,98.289],[7.86,98.292],[7.895,98.287],[7.93,98.272],[7.96,98.274],[8.00,98.282],[8.05,98.293],[8.10,98.296],[8.15,98.293],[8.19,98.284]];
+const KYY = [[8.097,98.576],[8.08,98.60],[8.05,98.62],[8.00,98.626],[7.96,98.62],[7.93,98.60],[7.915,98.58],[7.93,98.562],[7.97,98.555],[8.02,98.553],[8.06,98.558]];
+const KYN = [[8.205,98.60],[8.19,98.64],[8.15,98.66],[8.12,98.63],[8.11,98.595],[8.14,98.578],[8.18,98.582]];
+
+function svgOverview() {
+  const v = 'overview';
+  const land = [[15.2,97.75],[14.55,97.95],[14.0,98.1],[13.4,98.35],[12.8,98.55],[12.2,98.6],[11.5,98.7],[10.9,98.5],[10.4,98.55],[10.0,98.55],[9.5,98.4],[9.0,98.28],[8.6,98.23],[8.3,98.28],[8.22,98.32],[8.35,98.45],[8.42,98.55],[8.3,98.68],[8.15,98.76],[8.05,98.82],[8.02,98.86],[8.05,98.92],[7.9,99.02],[7.6,99.27],[7.3,99.52],[6.9,99.75],[6.9,100.65],[7.2,100.6],[7.7,100.35],[8.1,100.3],[8.45,100.2],[8.8,99.95],[9.15,99.45],[9.3,99.25],[9.8,99.2],[10.3,99.2],[10.8,99.4],[11.3,99.6],[11.8,99.8],[12.3,99.98],[12.7,99.98],[13.1,100.05],[13.45,100.25],[13.5,100.55],[13.35,100.95],[12.95,100.87],[12.68,100.95],[12.68,101.4],[12.6,101.8],[12.45,102.1],[12.2,102.45],[11.9,102.75],[11.9,103.2],[15.2,103.2]];
+  const border = [[14.55,98.85],[14.0,99.1],[13.3,99.2],[12.6,99.3],[12.0,99.55],[11.75,99.65],[11.2,99.35],[10.7,98.95],[10.3,98.75],[10.0,98.6]];
+  const bkk = P(v, 13.75, 100.5), hkt = P(v, 8.11, 98.32), kata = P(v, 7.82, 98.30), krabi = P(v, 8.04, 98.84), kbv = P(v, 8.10, 98.99);
+  const fl = `M${r1(bkk[0])},${r1(bkk[1])} Q150,230 ${r1(hkt[0])},${r1(hkt[1])}`;
+  const arr = `M-10,44 Q140,14 ${r1(bkk[0])},${r1(bkk[1])}`;
+  const home = `M${r1(kbv[0])},${r1(kbv[1])} Q60,420 -10,250`;
+  return STYLE + defs() +
+    `<rect class="sea" width="400" height="500"/><rect class="wavefill" width="400" height="500"/>` +
+    shape(v, land, 'land') + line(v, border, 'border') +
+    shape(v, PHUKET, 'land') + shape(v, KYY, 'land') +
+    blob(v, 9.5, 100.0, 7, 6) + blob(v, 12.05, 102.35, 4, 6) + blob(v, 7.74, 98.77, 2.5, 2.5) + blob(v, 9.72, 100.02, 3, 3) +
+    label(v, 9.6, 97.15, 'Andaman Sea', 'lbl-sea', -68) + label(v, 10.6, 100.55, 'Gulf of Thailand', 'lbl-sea', -60) +
+    `<text class="lbl-big" x="352" y="102" text-anchor="middle" style="font-size:19px;letter-spacing:2px">THAILAND</text>` + label(v, 12.3, 98.75, 'MYANMAR', 'lbl-sm', -76) + label(v, 9.4, 100.15, 'Koh Samui', 'lbl-sm') +
+    `<path id="r-arr" class="rt rt-flight flow" d="${arr}"/>` +
+    `<text class="route-txt" dy="-5"><textPath href="#r-arr" startOffset="6%">from BLR · BOM · HYD · DEL</textPath></text>` +
+    `<path id="r-flight" class="rt rt-flight flow" d="${fl}"/>` +
+    `<text class="route-txt" x="150" y="248" transform="rotate(-62 150 248)">~1.5 hr flight · Day 3</text>` +
+    line(v, [[7.82,98.30],[8.2,98.31],[8.45,98.52],[8.32,98.72],[8.04,98.84]], 'rt rt-van flow', 'r-van') +
+    `<path id="r-home" class="rt rt-faint" d="${home}"/>` +
+    `<text class="route-txt" dy="-4"><textPath href="#r-home" startOffset="40%">home · Day 8</textPath></text>` +
+    mover('r-flight', '✈️', 7, { rotate: true, size: 18 }) + mover('r-arr', '✈️', 9, { rotate: true, size: 15, begin: '-3s' }) + mover('r-van', '🚐', 6, { size: 13 }) +
+    clouds() + compass() + scaleBar(r1(100 / 111 * 500 / 7.4), '≈ 100 km');
+}
+
+function svgBangkok() {
+  const v = 'bangkok';
+  const river = [[13.80,100.497],[13.785,100.4955],[13.772,100.4965],[13.762,100.4935],[13.752,100.4885],[13.744,100.4905],[13.739,100.4985],[13.733,100.506],[13.727,100.5125],[13.719,100.514],[13.711,100.508],[13.703,100.5005],[13.695,100.503],[13.688,100.515],[13.682,100.53],[13.668,100.545]];
+  const boat = [[13.7465,100.4895],[13.744,100.4905],[13.739,100.4985],[13.733,100.506],[13.727,100.5125],[13.719,100.514],[13.711,100.508],[13.7045,100.501]];
+  const bts = [[13.7456,100.534],[13.744,100.543],[13.743,100.548],[13.7405,100.555],[13.737,100.560],[13.730,100.570],[13.724,100.578]];
+  const silom = [[13.7456,100.534],[13.737,100.5395],[13.7285,100.534],[13.722,100.527],[13.7187,100.514]];
+  const stations = bts.concat(silom.slice(1)).map(([a, b]) => { const [x, y] = P(v, a, b); return `<circle class="stn" cx="${r1(x)}" cy="${r1(y)}" r="2.6"/>`; }).join('');
+  return STYLE + defs() +
+    `<rect class="land" width="400" height="500" stroke="none"/><rect class="cityfill" width="400" height="500"/>` +
+    shape(v, [[13.7345,100.5365],[13.7345,100.5455],[13.7285,100.5455],[13.7285,100.5375]], 'park') +
+    shape(v, [[13.758,100.4915],[13.758,100.4945],[13.7545,100.4945],[13.7545,100.4915]], 'park') +
+    shape(v, [[13.734,100.556],[13.734,100.561],[13.7285,100.561],[13.7285,100.556]], 'park') +
+    shape(v, [[13.7535,100.4895],[13.7535,100.4945],[13.749,100.4945],[13.749,100.4895]], 'gold') +
+    [ [[13.7445,100.546],[13.7415,100.553],[13.7375,100.561],[13.731,100.571],[13.724,100.581]],
+      [[13.733,100.505],[13.731,100.52],[13.728,100.54],[13.722,100.56],[13.715,100.582]],
+      [[13.747,100.497],[13.737,100.507],[13.722,100.515],[13.705,100.507]],
+      [[13.7465,100.52],[13.7455,100.535],[13.7445,100.546]],
+      [[13.757,100.496],[13.7555,100.505],[13.756,100.516],[13.757,100.53]],
+      [[13.735,100.575],[13.73,100.582]],
+      [[13.79,100.535],[13.765,100.538],[13.746,100.54],[13.72,100.542],[13.69,100.545]],
+      [[13.745,100.565],[13.757,100.566],[13.775,100.568]] ].map(r => line(v, r, 'road')).join('') +
+    line(v, river, 'river', 'riv') + line(v, river, 'river-hi') +
+    line(v, bts, 'rail', 'r-bts') + line(v, silom, 'rail') + stations +
+    line(v, boat, 'rt rt-boat flow', 'r-boat') +
+    line(v, [[13.752,100.491],[13.749,100.4925],[13.7455,100.4945]], 'rt rt-walk') +
+    label(v, 13.765, 100.502, 'Old Town', 'lbl') + label(v, 13.725, 100.4855, 'Thonburi', 'lbl-sm') +
+    label(v, 13.749, 100.524, 'Siam', 'lbl-sm') + label(v, 13.719, 100.533, 'Silom', 'lbl-sm') +
+    label(v, 13.733, 100.556, 'Sukhumvit', 'lbl', -28) + label(v, 13.712, 100.522, 'Chao Phraya', 'lbl-sea', 62) +
+    label(v, 13.7905, 100.52, 'BANGKOK', 'lbl-big') +
+    mover('r-boat', '⛴️', 14, { size: 15 }) + mover('r-bts', '🚝', 8, { size: 13 }) +
+    clouds() + compass() + scaleBar(r1(1 / 111 * 500 / 0.121), '≈ 1 km');
+}
+
+function svgPhuket() {
+  const v = 'phuket';
+  const main = [[8.24,98.22],[8.235,98.27],[8.215,98.30],[8.212,98.33],[8.225,98.38],[8.24,98.40],[8.26,98.40],[8.26,98.22]];
+  return STYLE + defs() +
+    `<rect class="sea" width="400" height="500"/><rect class="wavefill" width="400" height="500"/>` +
+    shape(v, main, 'land') + shape(v, PHUKET, 'land') + shape(v, KYY, 'land') + shape(v, KYN, 'land') +
+    blob(v, 7.745, 98.37, 7, 5) + blob(v, 7.79, 98.372, 5, 6) + blob(v, 7.765, 98.478, 4, 4) + blob(v, 8.055, 98.48, 4, 3) + blob(v, 8.0, 98.47, 3, 4) + blob(v, 8.16, 98.48, 3, 3) + blob(v, 8.12, 98.52, 2.5, 3) +
+    line(v, [[8.205,98.30],[8.12,98.31],[8.03,98.33],[7.95,98.37],[7.89,98.385]], 'road') +
+    line(v, [[7.95,98.37],[7.85,98.33],[7.825,98.305]], 'road') +
+    line(v, [[8.113,98.317],[8.03,98.33],[7.95,98.34],[7.88,98.32],[7.825,98.30]], 'rt rt-van') +
+    line(v, [[7.825,98.30],[7.9,98.34],[8.0,98.37],[8.05,98.42],[8.07,98.447]], 'rt rt-faint') +
+    line(v, [[8.07,98.447],[8.065,98.49],[8.05,98.53],[8.03,98.558]], 'rt rt-boat flow', 'r-kyy') +
+    line(v, [[8.07,98.447],[8.13,98.47],[8.2,98.49]], 'rt rt-faint') +
+    line(v, [[7.82,98.368],[7.78,98.366],[7.745,98.37]], 'rt rt-boat') +
+    line(v, [[7.825,98.30],[7.95,98.335],[8.1,98.32],[8.205,98.305],[8.25,98.31]], 'rt rt-van flow', 'r-north') +
+    `<circle cx="${r1(P(v, 7.8846, 98.387)[0])}" cy="${r1(P(v, 7.8846, 98.387)[1])}" r="11" class="rt rt-walk"/>` +
+    label(v, 8.0, 98.33, 'PHUKET', 'lbl-big', -78) + label(v, 7.86, 98.252, 'Andaman Sea', 'lbl-sea', -80) +
+    label(v, 8.15, 98.43, 'Phang Nga Bay', 'lbl-sea') + label(v, 7.81, 98.39, 'Chalong Bay', 'lbl-sm') +
+    label(v, 7.95, 98.596, 'Koh Yao Yai', 'lbl-sm', -78) + label(v, 8.135, 98.565, 'Koh Yao Noi', 'lbl-sm') +
+    label(v, 8.045, 98.47, '~20 min', 'lbl-sm') +
+    mover('r-kyy', '🚤', 6, { size: 14 }) + mover('r-north', '🚐', 12, { size: 13, begin: '-4s' }) +
+    clouds() + compass() + scaleBar(r1(5 / 111 * 1000), '≈ 5 km');
+}
+
+function svgKrabi() {
+  const v = 'krabi';
+  const coast = [[8.10,98.70],[8.09,98.725],[8.075,98.75],[8.062,98.772],[8.05,98.792],[8.04,98.805],[8.033,98.812],[8.028,98.82],[8.02,98.828],[8.012,98.832],[8.004,98.836],[8.002,98.842],[8.008,98.847],[8.016,98.851],[8.024,98.86],[8.032,98.873],[8.04,98.89],[8.048,98.905],[8.04,98.918],[8.028,98.93],[8.012,98.945],[7.995,98.96],[7.98,98.98],[8.3,98.98],[8.3,98.70]];
+  const loop = [[8.028,98.818],[8.016,98.826],[8.0,98.838],[7.975,98.83],[7.958,98.822],[7.95,98.813],[7.958,98.803],[7.968,98.801],[7.99,98.806],[8.015,98.812],[8.028,98.818]];
+  return STYLE + defs() +
+    `<rect class="sea" width="400" height="500"/><rect class="wavefill" width="400" height="500"/>` +
+    shape(v, coast, 'land') +
+    shape(v, [[7.975,98.806],[7.972,98.812],[7.965,98.813],[7.962,98.807],[7.966,98.803]], 'land') +
+    shape(v, [[7.955,98.808],[7.951,98.811],[7.944,98.81],[7.94,98.806],[7.946,98.804]], 'land') +
+    blob(v, 7.9615, 98.8135, 3, 3) + blob(v, 7.986, 98.852, 4, 5) + blob(v, 7.99, 98.875, 5, 4) + blob(v, 8.0, 98.79, 3, 3) + blob(v, 7.935, 98.86, 5, 4) + blob(v, 7.93, 98.775, 4, 3) +
+    `<path class="sand" d="${smooth(pts(v, [[7.9615,98.8135],[7.957,98.811],[7.951,98.81]]), false)}"/>` +
+    line(v, [[8.16,98.75],[8.13,98.762],[8.12,98.775],[8.10,98.77],[8.085,98.78]], 'chan') +
+    line(v, [[8.13,98.762],[8.14,98.785],[8.135,98.8]], 'chan') +
+    line(v, [[8.16,98.90],[8.12,98.905],[8.085,98.91],[8.06,98.905],[8.048,98.905]], 'chan') +
+    line(v, [[8.04,98.825],[8.06,98.85],[8.075,98.88],[8.07,98.915]], 'road') +
+    line(v, [[8.07,98.915],[8.09,98.935],[8.10,98.955]], 'road') +
+    line(v, [[8.04,98.825],[8.07,98.81],[8.12,98.79],[8.17,98.775]], 'road') +
+    line(v, [[8.17,98.78],[8.12,98.795],[8.07,98.812],[8.036,98.835]], 'rt rt-van flow', 'r-in') +
+    line(v, loop, 'rt rt-boat flow', 'r-loop') +
+    line(v, [[8.033,98.814],[8.029,98.818],[8.026,98.823]], 'rt rt-walk') +
+    label(v, 8.14, 98.83, 'KRABI', 'lbl-big') + label(v, 8.058, 98.79, 'Ao Nang', 'lbl') +
+    label(v, 8.0, 98.754, 'Andaman Sea', 'lbl-sea') + label(v, 8.095, 98.905, 'Krabi River', 'lbl-sm', -80) +
+    label(v, 7.94, 98.83, '4-island loop', 'lbl-sm') +
+    mover('r-loop', '🛶', 16, { size: 15 }) + mover('r-in', '🚐', 7, { size: 13 }) +
+    clouds() + compass() + scaleBar(r1(2 / 111 * 2000), '≈ 2 km');
+}
+const SVG = { overview: svgOverview, bangkok: svgBangkok, phuket: svgPhuket, krabi: svgKrabi };
+
+/* ---------------- Map state & render ---------------- */
+const stage = $('#stage'), world = $('#world'), svg = $('#mapSvg'), pinsEl = $('#pins'), card = $('#card');
+const state = { view: 'overview', cats: new Set(Object.keys(CATS)), day: 0, open: null, pinned: false };
+let stamps = new Set(store.get('th27-stamps', []));
+
+function pinXY(p) { const [x, y] = P(p.v, p.at[0], p.at[1]); return p.off ? [x + p.off[0], y + p.off[1]] : [x, y]; }
+
+function renderViews() {
+  $('#views').innerHTML = Object.entries(VIEWS).map(([k, o]) =>
+    `<button class="chip${k === state.view ? ' on' : ''}" role="tab" aria-selected="${k === state.view}" data-view="${k}">${o.icon} ${o.label}</button>`).join('');
+  $('#views').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { stopTour(); setView(b.dataset.view); }));
+}
+function renderCats() {
+  $('#cats').innerHTML = Object.entries(CATS).map(([k, c]) =>
+    `<button class="chip${state.cats.has(k) ? '' : ' cat-off'}" data-cat="${k}" aria-pressed="${state.cats.has(k)}" style="--sw:var(--c-${k})"><span class="sw"></span>${c.label}</button>`).join('');
+  $('#cats').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.cat; state.cats.has(k) ? state.cats.delete(k) : state.cats.add(k); renderCats(); applyFilters();
+  }));
+}
+const DAYNAMES = ['', 'Sat 1', 'Sun 2', 'Mon 3', 'Tue 4', 'Wed 5', 'Thu 6', 'Fri 7', 'Sat 8'];
+function renderDays() {
+  let h = `<button class="chip${state.day === 0 ? ' on' : ''}" data-day="0">All</button>`;
+  for (let d = 1; d <= 8; d++) h += `<button class="chip${state.day === d ? ' on' : ''}" data-day="${d}" title="${DAYNAMES[d]} May">D${d}</button>`;
+  $('#days').innerHTML = h;
+  $('#days').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { stopTour(); focusDay(+b.dataset.day); }));
+}
+function viewForDay(d) { return d <= 2 ? 'bangkok' : d <= 5 ? 'phuket' : 'krabi'; }
+function focusDay(d) {
+  state.day = d; renderDays();
+  if (d && state.view !== viewForDay(d)) setView(viewForDay(d)); else applyFilters();
+}
+
+function render(v) {
+  state.view = v;
+  svg.innerHTML = SVG[v]();
+  let leaders = '';
+  const list = PINS.filter(p => p.v === v);
+  pinsEl.innerHTML = '';
+  list.forEach((p, i) => {
+    const [x, y] = pinXY(p);
+    if (p.off) { const [ax, ay] = P(v, p.at[0], p.at[1]); leaders += `<line class="leader" x1="${r1(ax)}" y1="${r1(ay)}" x2="${r1(x)}" y2="${r1(y)}"/><circle class="dot" cx="${r1(ax)}" cy="${r1(ay)}" r="2.4"/>`; }
+    const b = document.createElement('button');
+    b.className = 'pin' + (p.kind ? ' ' + p.kind : '') + (stamps.has(p.id) ? ' stamped' : '') + (p.lblLeft ? ' lbl-left' : '');
+    b.style.left = (x / 4) + '%'; b.style.top = (y / 5) + '%';
+    b.style.setProperty('--pc', `var(--c-${p.cat})`); b.style.setProperty('--d', (RM ? 0 : i * 0.04) + 's');
+    b.dataset.id = p.id;
+    b.setAttribute('aria-label', p.name + (p.days ? ', day ' + p.days.join(' and ') : ''));
+    if (p.kind === 'city') b.innerHTML = `<span class="bubble" style="background-image:url('photos/${p.photo}.jpg')"></span><span class="city-label">${p.name}<small>${p.nights}</small></span>`;
+    else if (p.kind === 'mini') b.innerHTML = `<span class="bubble">${p.emoji}</span><span class="city-label">${p.name}</span>`;
+    else b.innerHTML = `${p.opt ? '<span class="opt-ring"></span>' : ''}<span class="pin-head"><span class="pin-emoji">${p.emoji}</span></span><span class="pin-check">✓</span>`;
+    wirePin(b, p);
+    pinsEl.appendChild(b);
+  });
+  if (leaders) svg.insertAdjacentHTML('beforeend', leaders);
+  EDGES.filter(e => e.v === v).forEach(e => {
+    const [x, y] = P(v, e.at[0], e.at[1]);
+    const b = document.createElement('button');
+    b.className = 'edge'; b.textContent = e.label; b.style.left = (x / 4) + '%'; b.style.top = (y / 5) + '%';
+    if (e.nx) b.style.setProperty('--nx', e.nx); if (e.ny) b.style.setProperty('--ny', e.ny);
+    b.addEventListener('click', () => { stopTour(); setView(e.go, [x, y]); });
+    pinsEl.appendChild(b);
+  });
+  $('#viewNote').innerHTML = VIEWS[v].note;
+  renderViews(); renderList(); applyFilters();
+  store.set('th27-view', v);
+}
+
+function renderList() {
+  const list = PINS.filter(p => p.v === state.view);
+  $('#listTitle').textContent = state.view === 'overview' ? 'Stops' : 'Places in ' + VIEWS[state.view].label;
+  $('#placeList').innerHTML = list.map(p => `<button class="place" data-id="${p.id}" style="--pc:var(--c-${p.cat})">
+      <span class="ico">${p.emoji}</span>
+      <span><span class="nm">${p.name}</span><br><span class="meta">${p.days ? 'Day ' + p.days.join(', ') : ''}${p.opt ? ' · optional' : ''} · ${CATS[p.cat].label}</span></span>
+      <span class="st" aria-label="${stamps.has(p.id) ? 'stamped' : ''}">${stamps.has(p.id) ? '🛂' : ''}</span></button>`).join('');
+  $('#placeList').querySelectorAll('.place').forEach(el => {
+    const p = BYID[el.dataset.id];
+    el.addEventListener('click', () => { stopTour(); openCard(p, true); });
+    el.addEventListener('mouseenter', () => { if (!state.pinned) openCard(p, false); });
+  });
+}
+
+function applyFilters() {
+  pinsEl.querySelectorAll('.pin').forEach(el => {
+    const p = BYID[el.dataset.id];
+    el.classList.toggle('off', !state.cats.has(p.cat) && p.v !== 'overview');
+    el.classList.toggle('dim', !!state.day && !(p.days || []).includes(state.day));
+  });
+  $('#placeList').querySelectorAll('.place').forEach(el => {
+    const p = BYID[el.dataset.id];
+    el.classList.toggle('off', !state.cats.has(p.cat) && p.v !== 'overview');
+    el.classList.toggle('dim', !!state.day && !(p.days || []).includes(state.day));
+  });
+}
+
+function setView(v, origin) {
+  return new Promise(res => {
+    if (v === state.view) { applyFilters(); return res(); }
+    closeCard(true);
+    const o = origin || (v !== 'overview' ? pinXY(PINS.find(p => p.go === v) || { v: 'overview', at: [10.8, 99.6] }) : [200, 250]);
+    world.style.transformOrigin = (o[0] / 4) + '% ' + (o[1] / 5) + '%';
+    if (RM) { render(v); return res(); }
+    world.classList.add('leaving');
+    setTimeout(() => {
+      render(v);
+      world.classList.remove('leaving'); world.classList.add('entering');
+      requestAnimationFrame(() => requestAnimationFrame(() => { world.classList.remove('entering'); setTimeout(res, 340); }));
+    }, 300);
+  });
+}
+
+/* ---------------- Postcard ---------------- */
+let closeT = null;
+const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+function wirePin(b, p) {
+  b.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse' && !state.pinned) openCard(p, false); });
+  b.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && !state.pinned) closeSoon(); });
+  b.addEventListener('focus', () => { if (!state.pinned) openCard(p, false); });
+  b.addEventListener('click', e => {
+    stopTour();
+    if (p.go && (fine || (state.open === p.id))) { setView(p.go, pinXY(p)); return; }
+    openCard(p, true);
+  });
+}
+function closeSoon() { clearTimeout(closeT); closeT = setTimeout(() => closeCard(), 260); }
+card.addEventListener('pointerenter', () => clearTimeout(closeT));
+card.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && !state.pinned) closeSoon(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCard(true); });
+stage.addEventListener('click', e => { if (e.target === stage || e.target.closest('svg')) closeCard(true); });
+
+function commons(file) { return 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(file.replace(/ /g, '_')).replace(/%2C/g, ',').replace(/%28/g, '(').replace(/%29/g, ')'); }
+function mapsUrl(q) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); }
+
+function openCard(p, pinned, fromTour) {
+  clearTimeout(closeT);
+  if (p.v !== state.view) { setView(p.v).then(() => openCard(p, pinned, fromTour)); return; }
+  state.open = p.id; state.pinned = !!pinned;
+  pinsEl.querySelectorAll('.pin').forEach(el => el.classList.toggle('active', el.dataset.id === p.id));
+  $('#placeList').querySelectorAll('.place').forEach(el => el.classList.toggle('active', el.dataset.id === p.id));
+  const fresh = p.v !== 'overview' && !stamps.has(p.id);
+  const photo = p.photo
+    ? `<img src="photos/${p.photo}.jpg" alt="${p.photoNote ? p.photoNote.replace(/^Photo: /, '') : p.name}" loading="lazy">`
+    : `<div class="ill" style="--ill:${ILL[p.cat]}"><span>${p.emoji}</span><em>${CATS[p.cat].label}</em></div>`;
+  const days = p.days ? `<span class="tag">Day ${p.days.join(' · ')}</span>` : '';
+  const links = [
+    p.go ? `<button class="go" data-go="${p.go}">Explore ${VIEWS[p.go].label} →</button>` : '',
+    p.q ? `<a href="${mapsUrl(p.q)}" target="_blank" rel="noopener">📍 Google Maps</a>` : '',
+    p.wiki ? `<a href="https://en.wikipedia.org/wiki/${p.wiki}" target="_blank" rel="noopener">📖 Wikipedia</a>` : ''
+  ].join('');
+  card.style.setProperty('--pc', `var(--c-${p.cat})`);
+  card.innerHTML = `<button class="card-x" aria-label="Close">×</button>
+    <div class="card-photo">${photo}</div>
+    ${p.v !== 'overview' && (stamps.has(p.id) || fresh) ? `<div class="visa${fresh ? ' fresh' : ''}">Visited ✓</div>` : ''}
+    <div class="card-body">
+      <div class="card-tags">${days}<span class="tag cat">${CATS[p.cat].label}</span>${p.opt ? '<span class="tag opt">optional</span>' : ''}</div>
+      <h4>${p.name}</h4>
+      <p class="card-tip">${p.tip}</p>
+      ${p.kid ? `<p class="card-line"><span>👶</span><span>${p.kid}</span></p>` : ''}
+      ${p.veg ? `<p class="card-line"><span>🥗</span><span>${p.veg}</span></p>` : ''}
+      <div class="card-links">${links}</div>
+      ${p.photo ? `<div class="card-credit">${p.photoNote ? p.photoNote + ' · ' : ''}<a href="${commons(p.credit)}" target="_blank" rel="noopener">photo source</a></div>` : ''}
+    </div>`;
+  card.hidden = false;
+  card.querySelector('.card-x').addEventListener('click', () => closeCard(true));
+  const go = card.querySelector('.go'); if (go) go.addEventListener('click', () => { stopTour(); setView(go.dataset.go, pinXY(p)); });
+  placeCard(p);
+  if (fresh) addStamp(p.id);
+}
+function placeCard(p) {
+  const W = stage.clientWidth, H = stage.clientHeight;
+  card.classList.toggle('sheet', W < 500);
+  if (W < 500) { card.style.left = ''; card.style.top = ''; return; }
+  const [x, y] = pinXY(p); const px = x / 400 * W, py = y / 500 * H;
+  const cw = card.offsetWidth, ch = card.offsetHeight;
+  let left = px < W / 2 ? px + 28 : px - cw - 28;
+  left = Math.max(10, Math.min(W - cw - 10, left));
+  let top = Math.max(10, Math.min(H - ch - 10, py - ch / 2));
+  card.style.left = left + 'px'; card.style.top = top + 'px';
+}
+function closeCard(force) {
+  if (!force && state.pinned) return;
+  card.hidden = true; state.open = null; state.pinned = false;
+  pinsEl.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
+  $('#placeList').querySelectorAll('.place.active').forEach(el => el.classList.remove('active'));
+}
+window.addEventListener('resize', () => { if (state.open && !card.hidden) placeCard(BYID[state.open]); });
+
+/* ---------------- Stamps ---------------- */
+function updateStampPill(pop) {
+  $('#stampN').textContent = stamps.size + ' / ' + STAMPABLE.length;
+  if (pop && !RM) { const el = $('#stampPill'); el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+}
+function addStamp(id) {
+  stamps.add(id); store.set('th27-stamps', [...stamps]);
+  const el = pinsEl.querySelector(`.pin[data-id="${id}"]`); if (el) el.classList.add('stamped');
+  const row = $('#placeList').querySelector(`.place[data-id="${id}"] .st`); if (row) row.textContent = '🛂';
+  updateStampPill(true);
+  const inView = STAMPABLE.filter(p => p.v === state.view);
+  if (inView.every(p => stamps.has(p.id))) confetti();
+}
+function confetti() {
+  if (RM) return;
+  const box = $('#confetti'); const cols = ['var(--c-stay)', 'var(--c-see)', 'var(--c-eat)', 'var(--c-play)', 'var(--c-stroll)'];
+  for (let i = 0; i < 46; i++) {
+    const s = document.createElement('i');
+    s.style.left = Math.random() * 100 + '%'; s.style.background = cols[i % cols.length];
+    s.style.animationDelay = (Math.random() * 0.5) + 's'; s.style.transform = `rotate(${Math.random() * 180}deg)`;
+    box.appendChild(s); setTimeout(() => s.remove(), 2600);
+  }
+}
+
+/* ---------------- Tour ---------------- */
+const STEPS = [
+  { v: 'overview', path: 'r-arr', p: 'o-bkk', cap: 'Day 1 · Everyone lands in Bangkok' },
+  { v: 'bangkok', p: 'b-hotel', cap: 'Day 1 · Check in on Sukhumvit' },
+  { v: 'bangkok', p: 'b-watpho', cap: 'Day 1 · The Reclining Buddha' },
+  { v: 'bangkok', p: 'b-food', cap: 'Day 1 · Reunion dinner' },
+  { v: 'bangkok', p: 'b-asiatique', cap: 'Day 1 · Ferris wheel by the river' },
+  { v: 'bangkok', p: 'b-palace', cap: 'Day 2 · Grand Palace at opening' },
+  { v: 'bangkok', p: 'b-sealife', cap: 'Day 2 · Sharks under a mall' },
+  { v: 'bangkok', p: 'b-jodd', cap: 'Day 2 · Mango sticky rice night' },
+  { v: 'overview', path: 'r-flight', p: 'o-hkt', cap: 'Day 3 · Fly south to Phuket' },
+  { v: 'phuket', p: 'p-resort', cap: 'Day 3 · Beach base at Kata' },
+  { v: 'phuket', p: 'p-katanoi', cap: 'Day 3 · First swim' },
+  { v: 'phuket', p: 'p-aopo', cap: 'Day 4 · Speedboat from Ao Po' },
+  { v: 'phuket', path: 'r-kyy', p: 'p-kyy', cap: 'Day 4 · Koh Yao Yai day trip' },
+  { v: 'phuket', p: 'p-laemhad', cap: 'Day 4 · Sandbar group photo' },
+  { v: 'phuket', p: 'p-splash', cap: 'Day 5 · Splash Jungle' },
+  { v: 'phuket', p: 'p-oldtown', cap: 'Day 5 · Old Phuket Town' },
+  { v: 'overview', path: 'r-van', p: 'o-kbv', cap: 'Day 6 · Vans to Krabi' },
+  { v: 'krabi', p: 'k-resort', cap: 'Day 6 · Hello Ao Nang' },
+  { v: 'krabi', p: 'k-beach', cap: 'Day 6 · Sunset stroll' },
+  { v: 'krabi', p: 'k-railay', cap: 'Day 7 · Railay by longtail' },
+  { v: 'krabi', p: 'k-phranang', cap: 'Day 7 · Cave beach' },
+  { v: 'krabi', p: 'k-tup', cap: 'Day 7 · Walk the sandbar' },
+  { v: 'krabi', p: 'k-poda', cap: 'Day 7 · Lunch on Poda' },
+  { v: 'krabi', p: 'k-food', cap: 'Day 7 · Farewell dinner for 19' },
+  { v: 'krabi', p: 'k-kbv', cap: 'Day 8 · Flights home' },
+  { v: 'overview', path: 'r-home', cap: 'Home with a phone full of photos', end: true }
+];
+const traveler = $('#traveler'), cap = $('#tourCap');
+let tour = { on: false, i: -1, token: 0 };
+function setTraveler(x, y, glide) { traveler.classList.toggle('glide', !!glide); traveler.style.left = (x / 4) + '%'; traveler.style.top = (y / 5) + '%'; }
+function along(id, ms, token) {
+  return new Promise(res => {
+    const path = svg.querySelector('#' + id);
+    if (!path || RM) return res();
+    const len = path.getTotalLength(); const t0 = performance.now();
+    const step = now => {
+      if (token !== tour.token) return res();
+      const t = Math.min(1, (now - t0) / ms); const e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      const pt = path.getPointAtLength(len * e); setTraveler(Math.max(0, Math.min(400, pt.x)), Math.max(0, Math.min(500, pt.y)), true);
+      t < 1 ? requestAnimationFrame(step) : res();
+    };
+    requestAnimationFrame(step);
+  });
+}
+async function doStep(i, token) {
+  const s = STEPS[i]; tour.i = i;
+  $('#tProg').textContent = (i + 1) + ' / ' + STEPS.length;
+  cap.hidden = false; cap.textContent = s.cap;
+  closeCard(true);
+  if (state.day) { state.day = 0; renderDays(); }
+  if (state.view !== s.v) await setView(s.v);
+  if (token !== tour.token) return;
+  traveler.hidden = false;
+  if (s.path) await along(s.path, 2200, token);
+  if (token !== tour.token) return;
+  if (s.p) { const [x, y] = pinXY(BYID[s.p]); setTraveler(x, y, false); await wait(RM ? 0 : 700); if (token !== tour.token) return; openCard(BYID[s.p], true, true); }
+  if (s.end) confetti();
+}
+async function playTour() {
+  const token = ++tour.token; tour.on = true; $('#tPlay').textContent = '⏸ Pause';
+  if (tour.i >= STEPS.length - 1) tour.i = -1;
+  for (let i = tour.i + 1; i < STEPS.length; i++) {
+    await doStep(i, token); if (token !== tour.token) return;
+    await wait(3600); if (token !== tour.token) return;
+  }
+  tour.on = false; $('#tPlay').textContent = '▶ Play again';
+}
+function stopTour() {
+  if (!tour.on) return;
+  tour.token++; tour.on = false; $('#tPlay').textContent = '▶ Resume';
+}
+$('#tPlay').addEventListener('click', () => { if (tour.on) stopTour(); else playTour(); });
+$('#tNext').addEventListener('click', () => { stopTour(); const i = Math.min(STEPS.length - 1, tour.i + 1); doStep(i, ++tour.token); $('#tPlay').textContent = '▶ Resume'; });
+$('#tPrev').addEventListener('click', () => { stopTour(); const i = Math.max(0, tour.i - 1); doStep(i, ++tour.token); $('#tPlay').textContent = '▶ Resume'; });
+
+/* Itinerary → map */
+document.querySelectorAll('.on-map').forEach(b => b.addEventListener('click', () => {
+  showTab('map'); stopTour(); focusDay(+b.dataset.day);
+  window.scrollTo({ top: stage.getBoundingClientRect().top + window.scrollY - 120, behavior: RM ? 'auto' : 'smooth' });
+}));
+
+/* Init map */
+renderCats(); renderDays(); updateStampPill(false);
+const savedView = store.get('th27-view', 'overview');
+render(VIEWS[savedView] ? savedView : 'overview');
+$('#tProg').textContent = STEPS.length + ' stops';
+
+/* ---------------- Budget calculator ---------------- */
+const ADULT = { DEL: [64, 105], BLR: [66, 108], HYD: [66, 108], BOM: [69, 112] };
+let kids = 1, shown = 0, anim = 0;
+function inr(k) { return k >= 100 ? '₹' + (k / 100).toFixed(2) + 'L' : '₹' + Math.round(k) + 'K'; }
+function calc() {
+  const c = $('#cCity').value, t = +$('#cLevel').value / 100;
+  const a = ADULT[c][0] + (ADULT[c][1] - ADULT[c][0]) * t, kid = 30 + 2.5 * t;
+  const total = 2 * a + kids * kid;
+  $('#cNote').textContent = `2 adults × ${inr(a)} + ${kids} kid${kids === 1 ? '' : 's'} × ${inr(kid)} · estimate from the plan's ranges, not a quote` + (c === 'BOM' ? ' · add Pune–Mumbai transfer' : '');
+  cancelAnimationFrame(anim);
+  const from = shown, t0 = performance.now();
+  const tick = now => { const k = Math.min(1, (now - t0) / (RM ? 1 : 500)); shown = from + (total - from) * (1 - Math.pow(1 - k, 3)); $('#cOut').textContent = inr(shown); if (k < 1) anim = requestAnimationFrame(tick); };
+  anim = requestAnimationFrame(tick);
+}
+$('#cCity').addEventListener('change', calc); $('#cLevel').addEventListener('input', calc);
+$('#cKids').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+  kids = +b.dataset.k; $('#cKids').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); calc();
+}));
+calc();
+
+/* ---------------- Phrases ---------------- */
+const PHRASES = [
+  ['Hello', 'sa-wat-dee khrap / kha', 'สวัสดี'],
+  ['Thank you', 'khop khun khrap / kha', 'ขอบคุณ'],
+  ['Vegetarian', 'mang-sa-wi-rat', 'มังสวิรัติ'],
+  ['Vegan food', 'jay', 'เจ'],
+  ['No fish sauce', 'mai sai nam pla', 'ไม่ใส่น้ำปลา'],
+  ['Not spicy', 'mai phet', 'ไม่เผ็ด'],
+  ['How much?', 'thao rai?', 'เท่าไหร่'],
+  ['Where is the toilet?', 'hong nam yoo tee nai?', 'ห้องน้ำอยู่ที่ไหน']
+];
+$('#phrases').innerHTML = PHRASES.map(([en, say, th]) => `<button class="phrase" aria-label="${en}: ${say}"><span class="inner">
+  <span class="face front"><span class="en">${en}</span><span class="say">${say}</span><span class="hint">tap to flip</span></span>
+  <span class="face back"><span class="th" lang="th">${th}</span><span class="hint">${en}</span></span></span></button>`).join('');
+$('#phrases').querySelectorAll('.phrase').forEach(b => b.addEventListener('click', () => b.classList.toggle('flip')));
+
+/* ---------------- Checklist ---------------- */
+const CHECK = [
+  'Book international flights (each couple)', 'Book BKK → HKT flight for all 19', 'Book hotels: Sukhumvit, Kata, Ao Nang',
+  'Confirm IndiGo Krabi direct flights home', 'Book Koh Yao Yai day trip (boat + resort lunch)', 'Book Phuket → Krabi vans',
+  'Book Krabi 4-island longtail charter', 'Water park + FantaSea tickets', 'Travel insurance for all 19',
+  'Forex card / baht cash', 'Digital Arrival Card for everyone', 'Pack sunscreen, repellent, water shoes, meds'
+];
+let checks = store.get('th27-check2', {});
+function renderChecks() {
+  $('#checklist').innerHTML = CHECK.map((t, i) => `<label class="check-item${checks[i] ? ' checked' : ''}"><input type="checkbox" id="chk2-${i}" data-i="${i}"${checks[i] ? ' checked' : ''}><span>${t}</span></label>`).join('');
+  $('#checklist').querySelectorAll('input').forEach(cb => cb.addEventListener('change', () => { checks[cb.dataset.i] = cb.checked; store.set('th27-check2', checks); renderChecks(); }));
+  $('#chkBar').style.width = (CHECK.filter((_, i) => checks[i]).length / CHECK.length * 100) + '%';
+}
+renderChecks();
+
+/* ---------------- Journal ---------------- */
+const STK = ['🌴', '🐘', '🍛', '🏖️', '🚤', '🥭', '🛕', '😂', '❤️', '📸'];
+let stk = '🌴';
+$('#jStk').innerHTML = STK.map(s => `<button data-s="${s}" class="${s === stk ? 'on' : ''}" aria-label="Sticker ${s}">${s}</button>`).join('');
+$('#jStk').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { stk = b.dataset.s; $('#jStk').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b)); }));
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+function getEntries() { return store.get('th27-journal2', null) || store.get('th27-journal', []).map(e => ({ when: e.date, text: e.text, stk: '📝', day: '' })); }
+function renderEntries() {
+  const es = getEntries();
+  $('#entries').innerHTML = es.length ? es.map((e, i) => `<div class="entry" style="--r:${((i * 37) % 5) - 2}deg">
+      <span class="stk">${esc(e.stk || '📝')}</span>
+      <div class="when">${esc(e.day ? e.day + ' · ' : '')}${esc(e.when)}</div>
+      <div class="txt">${esc(e.text)}</div>
+      <button class="del" data-i="${i}">remove</button></div>`).join('')
+    : '<div class="empty">Your first page is blank. Write a note before you fly 🌴</div>';
+  $('#entries').querySelectorAll('.del').forEach(b => b.addEventListener('click', () => { const es2 = getEntries(); es2.splice(+b.dataset.i, 1); store.set('th27-journal2', es2); renderEntries(); }));
+}
+$('#jAdd').addEventListener('click', () => {
+  const text = $('#jText').value.trim(); if (!text) { $('#jText').focus(); return; }
+  const es = getEntries();
+  es.unshift({ text, stk, day: $('#jDay').value, when: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) });
+  store.set('th27-journal2', es); $('#jText').value = ''; renderEntries();
+});
+$('#jText').addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) $('#jAdd').click(); });
+renderEntries();
+})();
+</script>
+
+</html>
